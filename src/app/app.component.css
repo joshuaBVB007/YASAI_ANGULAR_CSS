@@ -1,0 +1,10 @@
+button{
+    display: block;border-width: 3px;
+    margin: auto;width: 30%;
+    margin-bottom: 5px;
+    border-color: black;border-radius: 10px;
+    background-color: white;
+}
+img{display: inline;margin: auto;width: 16%;height: 5%;}
+nav{width: 50%;margin: auto;}
+h1{ text-align: center; }
