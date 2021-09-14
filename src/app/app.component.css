@@ -5,6 +5,10 @@ button{
     border-color: black;border-radius: 10px;
     background-color: white;
 }
+.barrita{
+    height: 40px;
+    background-color: greenyellow;
+}
 img{display: inline;margin: auto;width: 16%;height: 5%;}
 nav{width: 50%;margin: auto;}
 h1{ text-align: center; }
