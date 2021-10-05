@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,10 +7,19 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent{
-  title='Zoologic life';
+  title='Doggy life';
+  f=new Date(Date.now());
+  anio=this.f.getUTCFullYear();
+  mes=this.f.getUTCMonth();
+  dia=this.f.getDate();
 
-  constructor(){}  
- 
+  lista=["a","b","c"];
+  
+  constructor(){
+    this.lista.forEach(function(a){
+      console.log(a);
+    });
+  }  
 }
 
 

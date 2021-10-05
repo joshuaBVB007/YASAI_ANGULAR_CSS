@@ -1,27 +1,14 @@
-<h1 class="content">{{title}}</h1>
-
+<h1>{{title}}</h1>
 <!--Barra de navegacion-->
-<nav>
-    <button><img src="../assets/dog.gif" alt="">About us</button>
-    <button><img src="../assets/girafe.gif" alt="">Animals</button>
-    <button><img src="../assets/traveler.gif" alt="">Location</button>
-    <button><img src="../assets/send-e-mail.gif" alt="">Contact</button>
-</nav>
-
-<div class="barrita"></div>
-
+<div class="barrita1">
+        <button routerLink="about"><img src="../assets/dog.gif" alt="">About  </button>
+        <button routerLink="animal" ><img src="../assets/girafe.gif" alt="">Animals</button>
+        <button routerLink="location" ><img src="../assets/traveler.gif" alt="">Location</button>
+        <button routerLink="contact"><img src="../assets/send-e-mail.gif" alt="">Contact</button>
+</div>
+<br>
+<br>
 <router-outlet></router-outlet>
 
-<!--Pie de pagina-->
-<footer>
-<div style="height: 150px; overflow: hidden;" >
-    <svg viewBox="0 0 500 150"
-    preserveAspectRatio="none" style="height: 100%; width: 100%;">
-    <path 
-    d="M0.00,49.98 C149.99,150.00 349.20,-49.98 520.59,49.83 L542.61,244.23 L-11.00,149.50 Z" 
-    style="stroke: none; fill: greenyellow">
-    </path>
-    </svg>
-</div>
-</footer>
-<div class="barrita"></div>
+
+

@@ -1,0 +1,22 @@
+img{
+    width: 30%;
+    height: 150px;
+    float: left;
+}
+input{
+    display: inline;
+    width: 80%;
+}
+button{
+    display: inline;
+}
+div{
+    width: 50%;
+    margin: auto;
+}
+ul{
+    display: block;
+    width: 50%;
+    text-decoration: none;
+    margin: auto;
+}

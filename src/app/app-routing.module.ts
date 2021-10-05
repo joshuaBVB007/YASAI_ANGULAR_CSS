@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:"animal",component:AnimalsComponent},
   {path:"contact",component:ContactComponent},
   {path:"location",component:LocationComponent},
-  {path: '', redirectTo: '/about',pathMatch:'full' },
+  {path:'', redirectTo: '/about',pathMatch:'full'},
   {path:"**",component:AboutUsComponent},
 ];
 
