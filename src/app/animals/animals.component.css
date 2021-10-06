@@ -1,14 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 img{
-    width: 30%;
+    /*Todo lo demas revisado*/
+    width: 25%;
     height: 150px;
     float: left;
+    opacity: 0.5;
 }
+img:hover {
+    opacity: 1.0;
+}
+
 input{
-    display: inline;
-    width: 80%;
+    display: block;
+    border-radius: 10px;
+    border-width: 1px;
+    width: 100%;
+    box-sizing: border-box;
 }
 button{
-    display: inline;
+    display: block;
+    margin: auto;
+    background-color: rgb(5, 7, 4);
+    border-radius: 10px;
+    color: rgb(233, 217, 202);
 }
 div{
     width: 50%;
@@ -16,7 +33,23 @@ div{
 }
 ul{
     display: block;
-    width: 50%;
+    width: 80%;
     text-decoration: none;
     margin: auto;
+}
+
+
+@media only screen and (max-width:500px){
+    ul{
+        display: block;
+        width: 90%;
+        text-decoration: none;
+        margin: auto;
+    }
+    img{
+        /*Todo lo demas revisado*/
+        width: 50%;
+        height: 150px;
+        float: left;
+    }
 }

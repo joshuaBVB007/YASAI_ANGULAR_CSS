@@ -9,19 +9,22 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AnimalsComponent implements OnInit {
   receptor:any;
-  lista!: any[];
+  lista: any[]=[
+    {nombre:"Jirafa",url:"../../assets/Animals/elefante.jpeg"},
+    {nombre:"Jirafa",url:"../../assets/Animals/hipopotamo.jpeg"},
+    {nombre:"Jirafa",url:"../../assets/Animals/jirafa.jpeg"},
+    {nombre:"Jirafa",url:"../../assets/Animals/leon.jpeg"},
+    {nombre:"Jirafa",url:"../../assets/Animals/rinoceronte.jpeg"},
+    {nombre:"Jirafa",url:"../../assets/Animals/zebra.jpeg"},
+  ];
   nombre:any;
   raza_a_buscar:string="";
 
-  constructor(private http:RestService,private route:ActivatedRoute){}  
-  ngOnInit(): void {
-    this.lista=[];
-  }
-
+  constructor(private http:RestService,private route:ActivatedRoute){} 
+  ngOnInit(): void {}
   Buscar(){
-      this.display();
+      //this.display();
   }
-
   async display(){
         this.lista.splice(0, 5);
         fetch('https://dog.ceo/api/breed/'+this.raza_a_buscar+'/images')
