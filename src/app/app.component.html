@@ -1,12 +1,30 @@
 <h1>{{title}}</h1>
-<!--Barra de navegacion-->
-<div class="barrita1">
-        <button routerLink="about"><img src="../assets/dog.gif" alt="">About  </button>
-        <button routerLink="animal" ><img src="../assets/girafe.gif" alt="">Animals</button>
-        <button routerLink="location" ><img src="../assets/traveler.gif" alt="">Location</button>
-        <button routerLink="contact"><img src="../assets/send-e-mail.gif" alt="">Contact</button>
-</div>
+<ul>
+        <li><a routerLink="about" >About</a></li>
+        <li><a routerLink="animal" >Animals</a></li>
+        <li><a routerLink="location" >Location</a></li>
+        <li><a routerLink="contact" >Contact</a></li>
+      </ul>
 <br>
+
+<div class="btn_menu">
+  <img class="logo" (click)="On()" src="../assets/menu_icon.svg" alt="" srcset="">
+</div>
+
+<div [ngClass]="barra_navegacion_activado ? 'container-menu_false' : 'container-menu' " >
+      <div class="cont-menu">
+            <nav>
+              <a>Facebook</a>
+              <a>Instagram</a>
+              <a>Whatsapp</a>
+              <a>Flaticon</a>
+              <a>Volcom</a>
+            </nav>
+            <label (click)="Off()">X</label>
+      </div>
+</div>
+
+
 <br>
 <br>
 <router-outlet></router-outlet>

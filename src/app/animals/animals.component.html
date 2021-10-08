@@ -3,9 +3,10 @@
         <button (click)="Buscar()">Buscar</button>
 </div>
 <br>
-<div class="bucle" *ngFor="let item of lista; let i=index">
-        <img [src]="item" alt="i">
-</div>
+<br>
+<ul *ngFor="let item of lista;">
+        <img [src]="item.url" alt="r">
+</ul>
 
 
 
