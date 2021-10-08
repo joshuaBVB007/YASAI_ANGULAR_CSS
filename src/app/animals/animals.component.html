@@ -1,11 +1,11 @@
 <div>
-        <input type="text" placeholder="Escribe una raza de perro" [(ngModel)]="raza_a_buscar">
+        <input type="text" placeholder="   Escribe una raza de perro" [(ngModel)]="raza_a_buscar">
         <button (click)="Buscar()">Buscar</button>
 </div>
-
-<ul *ngFor="let item of lista; let i=index">
+<br>
+<div class="bucle" *ngFor="let item of lista; let i=index">
         <img [src]="item" alt="i">
-</ul>
+</div>
 
 
 

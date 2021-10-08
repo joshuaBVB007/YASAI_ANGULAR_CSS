@@ -23,12 +23,12 @@ export class AnimalsComponent implements OnInit {
   }
 
   async display(){
-        this.lista.splice(0, 5);
+        this.lista.splice(0, 25);
         fetch('https://dog.ceo/api/breed/'+this.raza_a_buscar+'/images')
         .then(response => response.json())
         .then(data =>{
             console.log(data);
-            for (let index = 0; index < 5; index++) {
+            for (let index = 0; index < 25; index++) {
               const element = data.message[index];
               this.lista.push(element);
               console.log(element);

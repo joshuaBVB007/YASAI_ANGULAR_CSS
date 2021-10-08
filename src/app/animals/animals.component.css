@@ -1,14 +1,22 @@
 img{
-    width: 30%;
+    width: 20%;
     height: 150px;
     float: left;
 }
 input{
     display: inline;
     width: 80%;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: black;
 }
 button{
     display: inline;
+    background-color: pink;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 5px;
+    color: black;
 }
 div{
     width: 50%;
