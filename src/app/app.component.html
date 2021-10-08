@@ -6,6 +6,25 @@
         <li><a routerLink="contact" >Contact</a></li>
       </ul>
 <br>
+
+<div class="btn_menu">
+  <img class="logo" (click)="On()" src="../assets/menu_icon.svg" alt="" srcset="">
+</div>
+
+<div [ngClass]="barra_navegacion_activado ? 'container-menu_false' : 'container-menu' " >
+      <div class="cont-menu">
+            <nav>
+              <a>Facebook</a>
+              <a>Instagram</a>
+              <a>Whatsapp</a>
+              <a>Flaticon</a>
+              <a>Volcom</a>
+            </nav>
+            <label (click)="Off()">X</label>
+      </div>
+</div>
+
+
 <br>
 <router-outlet></router-outlet>
 

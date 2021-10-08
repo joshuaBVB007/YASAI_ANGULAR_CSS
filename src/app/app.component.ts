@@ -7,19 +7,23 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent{
-  title='Doggy life';
+  title='Natural life';
   f=new Date(Date.now());
   anio=this.f.getUTCFullYear();
   mes=this.f.getUTCMonth();
   dia=this.f.getDate();
-
-  lista=["a","b","c"];
+  barra_navegacion_activado=false;
   
   constructor(){
-    this.lista.forEach(function(a){
-      console.log(a);
-    });
+    
   }  
+
+  On(){
+    this.barra_navegacion_activado=true;
+  }
+  Off(){
+    this.barra_navegacion_activado=false;
+  }
 }
 
 
