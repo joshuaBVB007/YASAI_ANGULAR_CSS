@@ -1,17 +1,13 @@
-*{margin: 0;padding: 0;}
-div{width: 25%;height: 50px;background-color: cadetblue;}
-/**/
-.primero{
-    color: red;
-    position: sticky;
-    top: 0;
+img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: auto;
 }
-blockquote{width: 50%;margin: auto;}
-.static{position: static;top: 0;left: 10px;}
-.relative{position: relative;left: 30px;}
-.fixed{position: fixed;bottom: 0;right: 0;}
-.absolute{
-    position: absolute;
-    bottom: 0;
-    left:0;
+
+p{
+    width: 11em;
+    margin: auto;
+    border: 1px solid green;
+    word-wrap: break-word;
 }
