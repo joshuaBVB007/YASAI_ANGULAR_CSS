@@ -3,41 +3,26 @@
     padding: 0;
 }
 img{
-    width: 25%;
-    height: 150px;
-    float: left;
-    opacity: 0.5;
+    width: 25%;height: 150px;
+    float: left;opacity: 0.5;
 }
 img:hover {
     opacity: 1.0;
 }
-
 input{
-    display: block;
-    border-radius: 10px;
-    border-width: 1px;
-    width: 100%;
-    box-sizing: border-box;
+    display: block;border-radius: 8px;border-width: 1px;
+    width: 100%; padding: 4px;
 }
 button{
-    display: block;
-    margin: auto;
-    background-color: rgb(5, 7, 4);
-    border-radius: 10px;
-    color: rgb(233, 217, 202);
+    background-color: orange;padding: 5px; border-radius: 5px; border-color: white;
 }
 div{
-    width: 50%;
-    margin: auto;
+    width: 50%;margin: auto;
 }
 ul{
-    display: block;
-    width: 80%;
-    text-decoration: none;
-    margin: auto;
+    display: block;width: 80%;
+    text-decoration: none;margin: auto;
 }
-
-
 @media only screen and (max-width:500px){
     ul{
         display: block;

@@ -10,6 +10,8 @@ import { LocationComponent } from './location/location.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { FormsModule } from '@angular/forms';
     AnimalsComponent,
     LocationComponent,
     ContactComponent,
+    NavBarComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
