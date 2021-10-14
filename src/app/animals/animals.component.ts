@@ -10,12 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 export class AnimalsComponent implements OnInit {
   receptor:any;
   lista: any[]=[
-    {nombre:"Jirafa",url:"../../assets/Animals/elefante.jpeg"},
-    {nombre:"Jirafa",url:"../../assets/Animals/hipopotamo.jpeg"},
-    {nombre:"Jirafa",url:"../../assets/Animals/jirafa.jpeg"},
-    {nombre:"Jirafa",url:"../../assets/Animals/leon.jpeg"},
-    {nombre:"Jirafa",url:"../../assets/Animals/rinoceronte.jpeg"},
-    {nombre:"Jirafa",url:"../../assets/Animals/zebra.jpeg"},
+    {nombre:"Açaí",url:"../../assets/frutas/açai.jpeg"},
+    {nombre:"Banana",url:"../../assets/frutas/banana.jpeg"},
+    {nombre:"Cereza",url:"../../assets/frutas/cereza.jpeg"},
+    {nombre:"Fresa",url:"../../assets/frutas/fresa.jpeg"},
+    {nombre:"Manzana",url:"../../assets/frutas/manzana_verde.jpeg"},
+    {nombre:"Melocotón",url:"../../assets/frutas/melocoton.jpeg"},
+    {nombre:"Piña",url:"../../assets/frutas/piña.jpeg"},
+    {nombre:"Uvas",url:"../../assets/frutas/uvas.jpeg"},
   ];
   nombre:any;
   raza_a_buscar:string="";

@@ -1,11 +1,18 @@
 <div>
-        <input type="text" placeholder="Escribe una raza de perro" [(ngModel)]="raza_a_buscar">
+        <input type="text" placeholder="Articulo que buscas?" [(ngModel)]="raza_a_buscar">
         <button (click)="Buscar()">Buscar</button>
 </div>
 <br>
 <br>
 <ul *ngFor="let item of lista;">
-        <img [src]="item.url" alt="r">
+        <div class="card">
+                <img [src]="item.url" alt="r">
+                <h6>{{item.nombre}}</h6>
+                <br>
+                <div class="servicios">
+                        <img class="carrito" src="../../assets/flaticon_icons/shopping-cart.png" alt="shopping-cart">
+                </div>
+        </div>
 </ul>
 
 

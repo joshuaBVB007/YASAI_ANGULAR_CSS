@@ -1,6 +1,4 @@
-.header{
-    position: relative;
-}
+.header{position: relative;}
 nav{
     display: flex;align-items: center;padding: 20px 8%;
 }
@@ -8,7 +6,7 @@ nav{
     width: 50px;margin-right: 20px;cursor: pointer;
 }
 .menu2{
-    width: 160px;cursor: pointer;
+    font-weight: bold;font-size: x-large;
 }
 nav ul{
     flex: 1;
@@ -31,7 +29,6 @@ button{
     border: none;
     cursor: pointer;
 }
-
 button span{
     display:block;
     background-color: white;

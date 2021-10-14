@@ -3,7 +3,7 @@ div{
     bottom: 0;
     height: 60px;
     width: 100%;
-    background-color: white;
+    background-color: black;
 }
 img{
     float: left;
@@ -21,7 +21,8 @@ img{
 
 h6{
     float: right;
-    color:black;
+    color:white;
     font-weight: bold;
     margin-top: 20px;
+    margin-right: 10px;
 }
