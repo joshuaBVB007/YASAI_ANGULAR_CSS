@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { ToolBarComponent } from './tool-bar/tool-bar.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     ContactComponent,
     NavBarComponent,
     PaginationComponent,
+    ToolBarComponent,
   ],
   imports: [
     BrowserModule,

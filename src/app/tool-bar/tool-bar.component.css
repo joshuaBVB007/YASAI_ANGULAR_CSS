@@ -1,0 +1,33 @@
+.tool_bar{
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 3%;
+    background-color: rgb(237, 253, 9);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.iconos{
+    position: relative;
+}
+
+.iconos:hover span{
+    visibility: visible;
+}
+
+span{
+    position: absolute;
+    top: 2px;
+    left: 44px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+img{
+    margin: 4px;
+    width: 30px;
+    height: 30px;
+}
