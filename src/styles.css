@@ -1,9 +1,15 @@
 /* You can add global styles to this file, and also import other style file*
 */
 
+@font-face {
+    font-family: inconsolata;
+    src: url("assets/Inconsolata/inconsolata.ttf");
+}
+
 body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(106, 247, 136);
+    font-family: inconsolata;
+    background-color: rgb(20, 218, 142);
 }
