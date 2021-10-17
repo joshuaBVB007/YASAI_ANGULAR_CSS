@@ -15,6 +15,9 @@ button{
 div{
     width: 50%;margin: auto;
 }
+.conCards{
+    width: 60%;margin: auto;
+}
 ul{
     display: block;width: 100%;
     text-decoration: none;
@@ -24,23 +27,22 @@ h6{
 }
 .card{
     position: relative;float: left;
-    width: 20%;border-color: black;
+    width: 30%;border-color: black;
     border-width: 4px;margin: 6px;
 }
-
 .btn_interno{
     background-color: rgb(22, 218, 64);
     border-radius: 0;
 }
-
-
-
-@media only screen and (max-width:500px){
+@media only screen and (max-width:540px){
+    .conCards{
+        /*contenedor de cards*/
+        width: 80%;
+    }
     .card{
-        float: left;
-        width: 30%;
+        width: 40%;
+        margin: 2px;
         border-color: black;
-        margin: 1px;
     }
     h6{
         font-size: 8px;

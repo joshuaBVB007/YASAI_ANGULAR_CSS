@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 
 @Component({
   selector: 'app-animals',
   templateUrl: './animals.component.html',
   styleUrls: ['./animals.component.css']
 })
+
 export class AnimalsComponent implements OnInit {
   receptor:any;
   lista: any[]=[
@@ -22,7 +23,7 @@ export class AnimalsComponent implements OnInit {
   nombre:any;
   raza_a_buscar:string="";
 
-  constructor(private http:RestService,private route:ActivatedRoute){} 
+  constructor(private router:Router,private http:RestService,private route:ActivatedRoute){} 
   ngOnInit(): void {}
   Buscar(){
       //this.display();
@@ -39,6 +40,10 @@ export class AnimalsComponent implements OnInit {
               console.log(element);
             }
         }); 
+  }
+  SeeDetails(url:string){
+      this.http.InsertImg(url);
+      this.router.navigateByUrl("details");
   }
 
 }

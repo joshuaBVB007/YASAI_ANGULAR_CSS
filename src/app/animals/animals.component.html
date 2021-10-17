@@ -4,10 +4,10 @@
 </div>
 <br>
 <br>
-<div>
+<div class="conCards">
         <ul *ngFor="let item of lista;">
                 <div class="card">
-                        <img [src]="item.url" alt="r">
+                        <img (click)="SeeDetails(item.url)" [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <button class="btn_interno">Add</button>
                 </div>
