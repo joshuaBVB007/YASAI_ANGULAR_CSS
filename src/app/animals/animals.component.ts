@@ -9,8 +9,6 @@ import { ActivatedRoute,NavigationExtras,Router } from '@angular/router';
 })
 
 export class AnimalsComponent implements OnInit {
-  receptor:any;
-  url="";
   lista: any[]=[
     {nombre:"Açaí",url:"../../assets/frutas/açai.jpeg"},
     {nombre:"Banana",url:"../../assets/frutas/banana.jpeg"},
@@ -21,27 +19,9 @@ export class AnimalsComponent implements OnInit {
     {nombre:"Piña",url:"../../assets/frutas/piña.jpeg"},
     {nombre:"Uvas",url:"../../assets/frutas/uvas.jpeg"},
   ];
-  nombre:any;
-  raza_a_buscar:string="";
 
   constructor(private router:Router,private http:RestService,private route:ActivatedRoute){} 
   ngOnInit(): void {}
-  Buscar(){
-      //this.display();
-  }
-  async display(){
-        this.lista.splice(0, 25);
-        fetch('https://dog.ceo/api/breed/'+this.raza_a_buscar+'/images')
-        .then(response => response.json())
-        .then(data =>{
-            console.log(data);
-            for (let index = 0; index < 25; index++) {
-              const element = data.message[index];
-              this.lista.push(element);
-              console.log(element);
-            }
-        }); 
-  }
 }
 
 

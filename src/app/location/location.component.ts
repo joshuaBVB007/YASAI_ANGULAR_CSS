@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationComponent implements OnInit {
 
-  constructor() { }
-  ngOnInit(): void {
-    console.log("somos location")
-  }
+  constructor() {}
+  ngOnInit(): void {}
 }

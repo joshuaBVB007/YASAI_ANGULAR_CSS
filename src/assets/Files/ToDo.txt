@@ -1,0 +1,5 @@
+f=new Date(Date.now());
+  anio=this.f.getUTCFullYear();
+  mes=this.f.getUTCMonth();
+  dia=this.f.getDate();
+  barra_navegacion_activado=false;

@@ -1,3 +1,4 @@
+/*Contenedor Principal*/
 .tool_bar{
     position: fixed;
     left: 0;
@@ -6,15 +7,14 @@
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
-
-.iconos{
+/*secciones que se componen de imagen y un span que funciona de tooltip*/
+.section{
     position: relative;
 }
-
+/*etiquetas span al ser tener el mouse encima*/
 .iconos:hover span{
     visibility: visible;
 }
-
 span{
     position: absolute;
     top: 2px;
@@ -24,7 +24,6 @@ span{
     font-weight: bold;
     visibility: hidden;
 }
-
 img{
     margin: 4px;
     width: 30px;

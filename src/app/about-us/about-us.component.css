@@ -4,11 +4,6 @@ h1{
 .marco_texto{
     overflow: auto;
 }
-.barrita{
-    width: 50%;
-    margin: auto;
-    height: 4px;background-color: coral;
-}
 blockquote{
     text-align: center;
     display: block;

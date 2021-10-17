@@ -5,20 +5,6 @@ div{
     width: 100%;
     background-color: black;
 }
-img{
-    float: left;
-    margin-left: 10px;
-    right: 50px;
-    width: 40px;
-    height: 60px;
-}
-
-.facebook{
-    margin-top: 6px;
-    width: 40px;
-    height: 48px;
-}
-
 h6{
     float: right;
     color:white;
