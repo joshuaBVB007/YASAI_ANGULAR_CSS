@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
-import { ActivatedRoute,Router } from '@angular/router';
+import { ActivatedRoute,NavigationExtras,Router } from '@angular/router';
 
 @Component({
   selector: 'app-animals',
@@ -10,6 +10,7 @@ import { ActivatedRoute,Router } from '@angular/router';
 
 export class AnimalsComponent implements OnInit {
   receptor:any;
+  url="";
   lista: any[]=[
     {nombre:"Açaí",url:"../../assets/frutas/açai.jpeg"},
     {nombre:"Banana",url:"../../assets/frutas/banana.jpeg"},
@@ -41,11 +42,6 @@ export class AnimalsComponent implements OnInit {
             }
         }); 
   }
-  SeeDetails(url:string){
-      this.http.InsertImg(url);
-      this.router.navigateByUrl("details");
-  }
-
 }
 
 

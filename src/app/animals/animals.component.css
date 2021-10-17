@@ -25,6 +25,7 @@ ul{
 h6{
     text-align: center; font-weight: bold;
 }
+
 .card{
     position: relative;float: left;
     width: 30%;border-color: black;

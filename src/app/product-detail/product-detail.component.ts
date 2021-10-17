@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { RestService } from '../rest.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -7,13 +7,11 @@ import { RestService } from '../rest.service';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  url_De_la_imagen="";
-
-  constructor(private rest:RestService) { }
-
-  ngOnInit(): void {
-    console.log(this.rest.ReturnImg());
-    this.url_De_la_imagen=this.rest.ReturnImg();
+  url_recibida="";
+  constructor(private route:ActivatedRoute) {
+    
   }
-
+  ngOnInit(): void {
+    this.url_recibida=this.route.snapshot.params['objeto'];
+  }
 }
