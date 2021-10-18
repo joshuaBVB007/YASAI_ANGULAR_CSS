@@ -1,8 +1,8 @@
-
-
 /*Contenedor principal*/
 .header{
     position: relative;
+    background-color: greenyellow;
+    opacity: 0.8;
 }
 
 /*Las 2 imagenes del costado derecho*/
@@ -34,5 +34,6 @@ nav ul li{
 /*Etiquetas ancla de la barra de navegacion*/
 nav ul li a{
     text-decoration: none;
-    color:black;
+    color: black;
+    font-weight: bold;
 }

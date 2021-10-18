@@ -3,11 +3,14 @@ div{
     bottom: 0;
     height: 60px;
     width: 100%;
-    background-color: black;
+    border-color: black;
+    border-width: 5px;
+    background-color: greenyellow;
+    opacity: 0.8;
 }
 h6{
     float: right;
-    color:white;
+    color:black;
     font-weight: bold;
     margin-top: 20px;
     margin-right: 10px;

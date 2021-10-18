@@ -12,7 +12,7 @@
     position: relative;
 }
 /*etiquetas span al ser tener el mouse encima*/
-.iconos:hover span{
+.section:hover span{
     visibility: visible;
 }
 span{
@@ -20,6 +20,9 @@ span{
     top: 2px;
     left: 44px;
     color: white;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: purple;
     text-align: center;
     font-weight: bold;
     visibility: hidden;
