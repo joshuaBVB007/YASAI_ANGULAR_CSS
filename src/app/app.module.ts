@@ -14,6 +14,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { MostradorComponent } from './mostrador/mostrador.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     PaginationComponent,
     ToolBarComponent,
     ProductDetailComponent,
+    MostradorComponent,
   ],
   imports: [
     BrowserModule,

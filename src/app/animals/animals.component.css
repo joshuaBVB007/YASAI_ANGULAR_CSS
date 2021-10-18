@@ -13,6 +13,7 @@ button{
 /*Contenedor de cards*/
 .conCards{
     width: 60%;margin: auto;
+    clear: left;
 }
 ul{
     display: block;width: 100%;
@@ -41,6 +42,8 @@ h6{
     clear: left;
     visibility: hidden;
 }
+
+
 
 
 /*Diseño para dispositivos moviles*/
