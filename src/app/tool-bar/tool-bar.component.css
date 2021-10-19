@@ -1,9 +1,7 @@
 /*Contenedor Principal*/
 .tool_bar{
-    position: fixed;
-    left: 0;
-    top: 140px;
-    width: 3%;
+    position: fixed;left: 0;
+    top: 140px;width: 3%;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -16,20 +14,26 @@
     visibility: visible;
 }
 span{
-    position: absolute;
-    top: 2px;
-    left: 44px;
-    color: black;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: greenyellow;
-    opacity: 0.8;
-    text-align: center;
-    font-weight: bold;
-    visibility: hidden;
+    position: absolute;top: 2px;
+    left: 44px;color: black;
+    padding: 8px;border-radius: 5px;
+    background-color: greenyellow;opacity: 0.8;
+    text-align: center;font-weight: bold;visibility: hidden;
 }
 img{
     margin: 4px;
     width: 30px;
     height: 30px;
+}
+
+.section .counter{
+    position: absolute;
+    left: 20px;
+    top: -2px;
+    width: 24px;
+    height: 26px;
+    color: black;border-radius: 50%;
+    background-color: greenyellow;opacity: 0.8;
+    font-weight: bold;visibility: visible;
+    font-size: 8.8px;
 }

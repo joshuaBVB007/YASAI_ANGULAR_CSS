@@ -15,6 +15,8 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { MostradorComponent } from './mostrador/mostrador.component';
+import { MiListaComponent } from './mi-lista/mi-lista.component';
+import { CounterComponent } from './counter/counter.component';
 
 
 @NgModule({
@@ -29,6 +31,8 @@ import { MostradorComponent } from './mostrador/mostrador.component';
     ToolBarComponent,
     ProductDetailComponent,
     MostradorComponent,
+    MiListaComponent,
+    CounterComponent,
   ],
   imports: [
     BrowserModule,

@@ -22,6 +22,12 @@ export class AnimalsComponent implements OnInit {
 
   constructor(private router:Router,private http:RestService,private route:ActivatedRoute){} 
   ngOnInit(): void {}
+
+  Add(producto:string){
+    console.log(producto);
+    this.http.add_to_mi_lista(producto);
+  }
+  
 }
 
 
