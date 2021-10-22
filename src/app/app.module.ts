@@ -15,6 +15,11 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { MostradorComponent } from './mostrador/mostrador.component';
+import { MatomoModule } from 'ngx-matomo';
+import { NgxMatomoTrackerModule } from '@ngx-matomo/tracker';
+import { NgxMatomoRouterModule } from '@ngx-matomo/router';
+
+
 
 
 @NgModule({
@@ -35,7 +40,14 @@ import { MostradorComponent } from './mostrador/mostrador.component';
     AppRoutingModule,
     NoopAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
+    NgxMatomoTrackerModule.forRoot({
+      siteId: '4', // your Matomo's site ID (find it in your Matomo's settings)
+      trackerUrl: 'https://jona.matomo.cloud', // your matomo server root url
+    }),
+    //matomo router*/
+    NgxMatomoRouterModule, // Add this
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,9 +19,13 @@ export class AnimalsComponent implements OnInit {
     {nombre:"Piña",url:"../../assets/frutas/piña.jpeg"},
     {nombre:"Uvas",url:"../../assets/frutas/uvas.jpeg"},
   ];
-
   constructor(private router:Router,private http:RestService,private route:ActivatedRoute){} 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.saludar();
+  }
+  saludar(){
+    console.log("entró");
+  }
 }
 
 
