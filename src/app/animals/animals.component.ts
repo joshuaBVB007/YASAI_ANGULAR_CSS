@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
 import { ActivatedRoute,NavigationExtras,Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-animals',
   templateUrl: './animals.component.html',
