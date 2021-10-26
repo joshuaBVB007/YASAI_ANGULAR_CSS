@@ -3,12 +3,14 @@
         <button>Buscar</button>
 </div>
 <br>
+
+<h1></h1>
 <div class="conCards">
-        <ul *ngFor="let item of lista;">
+        <ul *ngFor="let item of lista | search:lista:'banana';">
                 <div class="card">
                         <img [routerLink]="['/details',item.url]" [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
-                        <button (click)="Add(item.nombre )"  class="btn_interno">Add</button>
+                        <button (click)="Add(item.nombre)"  class="btn_interno">Add</button>
                 </div>
         </ul>
 </div>

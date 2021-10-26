@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -8,10 +8,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductDetailComponent implements OnInit {
   url_recibida="";
-  constructor(private route:ActivatedRoute) {
+  nombre_recibido="";
+  constructor(private router:Router,private route:ActivatedRoute) {
     
   }
   ngOnInit(): void {
-    this.url_recibida=this.route.snapshot.params['objeto'];
+    this.url_recibida=this.route.snapshot.params['img'];
+    this.nombre_recibido=this.route.snapshot.params['nombre_producto'];
+  }
+
+  go(){
+    console.log("Yendo a info en ruta relativa");
+    this.router.navigate(['info'], { relativeTo: this.route });
   }
 }

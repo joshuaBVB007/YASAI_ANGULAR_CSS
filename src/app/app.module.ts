@@ -17,6 +17,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { MostradorComponent } from './mostrador/mostrador.component';
 import { MiListaComponent } from './mi-lista/mi-lista.component';
 import { CounterComponent } from './counter/counter.component';
+import { InfoProductComponent } from './info-product/info-product.component';
+import { SearchDataPipe } from './search-data.pipe';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
@@ -33,6 +36,9 @@ import { CounterComponent } from './counter/counter.component';
     MostradorComponent,
     MiListaComponent,
     CounterComponent,
+    InfoProductComponent,
+    SearchDataPipe,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
