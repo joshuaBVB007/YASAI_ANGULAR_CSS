@@ -3,12 +3,40 @@
         <button>Buscar</button>
 </div>
 <br>
-
+<app-tool-bar></app-tool-bar>
+<div class="menu">
+        <div (click)="cambio('postres')">
+            <img src="../../assets/Flaticon_icons/cupcake.png" alt="smoothie">
+            <h6>Postres</h6>
+        </div>
+        <div (click)="cambio('smoothies')">
+            <img src="../../assets/Flaticon_icons/smoothie.png" alt="smoothie">
+            <h6>Smoothie</h6>
+        </div>
+        <div (click)="cambio('frutas')">
+            <img src="../../assets/Flaticon_icons/frutas.png" alt="smoothie">
+            <h6>Frutas</h6>
+        </div>
+    </div>
 <h1></h1>
-<div class="conCards">
-        <ul *ngFor="let item of lista | search:lista:'banana';">
-                <div class="card">
-                        <img [routerLink]="['/details',item.url]" [src]="item.url" alt="r">
+<div  [ngSwitch]="tipo_producto" class="conCards">
+        <ul *ngSwitchCase="'frutas'" >
+                <div *ngFor="let item of frutas" class="card">
+                        <img [routerLink]="['/details',item.url,item.nombre]" [src]="item.url" alt="r">
+                        <h6>{{item.nombre}}</h6>
+                        <button (click)="Add(item.nombre)"  class="btn_interno">Add</button>
+                </div>
+        </ul>
+        <ul *ngSwitchCase="'postres'" >
+                <div *ngFor="let item of postres" class="card">
+                        <img [routerLink]="['/details',item.url,item.nombre]" [src]="item.url" alt="r">
+                        <h6>{{item.nombre}}</h6>
+                        <button (click)="Add(item.nombre)"  class="btn_interno">Add</button>
+                </div>
+        </ul>
+        <ul *ngSwitchCase="'smoothies'" >
+                <div *ngFor="let item of smoothies" class="card">
+                        <img [routerLink]="['/details',item.url,item.nombre]" [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <button (click)="Add(item.nombre)"  class="btn_interno">Add</button>
                 </div>

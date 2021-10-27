@@ -5,7 +5,6 @@ import { AnimalsComponent } from './animals/animals.component';
 import { ContactComponent } from './contact/contact.component';
 import { InfoProductComponent } from './info-product/info-product.component';
 import { LocationComponent } from './location/location.component';
-import { MostradorComponent } from './mostrador/mostrador.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
@@ -15,7 +14,6 @@ const routes: Routes = [
   {path:"animal",component:AnimalsComponent},
   {path:"contact",component:ContactComponent},
   {path:"location",component:LocationComponent},
-  {path:"mostrador",component:MostradorComponent},
   {path:"details/:img/:nombre_producto",component:ProductDetailComponent,
   children:[
     {path:"info",component:InfoProductComponent},

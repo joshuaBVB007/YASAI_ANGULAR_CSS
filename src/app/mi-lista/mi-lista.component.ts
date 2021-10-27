@@ -10,7 +10,7 @@ export class MiListaComponent implements OnInit {
   lista:any;
   constructor(private rest:RestService) { }
   ngOnInit(): void {
-    this.rest.ReturnMi_lista_subject().subscribe(lista_=>{
+    this.rest.Return_lista_subject().subscribe(lista_=>{
         this.lista=lista_;
     })
   }

@@ -14,7 +14,6 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { MostradorComponent } from './mostrador/mostrador.component';
 import { MiListaComponent } from './mi-lista/mi-lista.component';
 import { CounterComponent } from './counter/counter.component';
 import { InfoProductComponent } from './info-product/info-product.component';
@@ -33,7 +32,6 @@ import { SearchPipe } from './search.pipe';
     PaginationComponent,
     ToolBarComponent,
     ProductDetailComponent,
-    MostradorComponent,
     MiListaComponent,
     CounterComponent,
     InfoProductComponent,

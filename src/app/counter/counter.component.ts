@@ -12,7 +12,7 @@ export class CounterComponent implements OnInit {
   constructor(private rest:RestService) { }
 
   ngOnInit(): void {
-    this.rest.ReturnMi_lista_subject().subscribe(lista=>{
+    this.rest.Return_lista_subject().subscribe(lista=>{
       this.longitud_lista=lista.length;
     });
   }
