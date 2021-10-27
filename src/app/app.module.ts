@@ -46,13 +46,6 @@ import { SearchPipe } from './search.pipe';
     NoopAnimationsModule,
     HttpClientModule,
     FormsModule,
-    
-    NgxMatomoTrackerModule.forRoot({
-      siteId: '4', // your Matomo's site ID (find it in your Matomo's settings)
-      trackerUrl: 'https://jona.matomo.cloud', // your matomo server root url
-    }),
-    //matomo router*/
-    NgxMatomoRouterModule, // Add this
   ],
   providers: [],
   bootstrap: [AppComponent]
