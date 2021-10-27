@@ -1,0 +1,28 @@
+.principal{
+    /* position relative es necesario para luego usar objetos absolutos dentrod de el*/
+    position: relative;
+    width:50%;height: 80vh;margin: auto;
+    background-color: greenyellow;opacity: 0.8;
+}
+.mapa{
+    width: 100%;
+    max-height: 50vh;
+}
+.datos{ 
+    position: absolute;bottom: 0;
+    width: 100%;
+}
+.iconos{
+    width: 20%;margin: auto;
+}
+img{display:block;margin:auto;padding: 5px;
+    height: 40px;}
+h4{
+    text-align: center;
+}
+
+@media screen and (max-width:400px) {
+    h4{
+        font-size: small;
+    }
+}

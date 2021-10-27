@@ -15,11 +15,11 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { MostradorComponent } from './mostrador/mostrador.component';
-import { MatomoModule } from 'ngx-matomo';
-import { NgxMatomoTrackerModule } from '@ngx-matomo/tracker';
-import { NgxMatomoRouterModule } from '@ngx-matomo/router';
-
-
+import { MiListaComponent } from './mi-lista/mi-lista.component';
+import { CounterComponent } from './counter/counter.component';
+import { InfoProductComponent } from './info-product/info-product.component';
+import { SearchDataPipe } from './search-data.pipe';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
@@ -34,6 +34,11 @@ import { NgxMatomoRouterModule } from '@ngx-matomo/router';
     ToolBarComponent,
     ProductDetailComponent,
     MostradorComponent,
+    MiListaComponent,
+    CounterComponent,
+    InfoProductComponent,
+    SearchDataPipe,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,

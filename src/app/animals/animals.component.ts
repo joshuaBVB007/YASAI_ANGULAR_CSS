@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
 import { ActivatedRoute,NavigationExtras,Router } from '@angular/router';
+import { SearchDataPipe } from '../search-data.pipe';
 
 
 @Component({
@@ -10,6 +11,8 @@ import { ActivatedRoute,NavigationExtras,Router } from '@angular/router';
 })
 
 export class AnimalsComponent implements OnInit {
+
+  text="";
   lista: any[]=[
     {nombre:"Açaí",url:"../../assets/frutas/açai.jpeg"},
     {nombre:"Banana",url:"../../assets/frutas/banana.jpeg"},
@@ -21,12 +24,14 @@ export class AnimalsComponent implements OnInit {
     {nombre:"Uvas",url:"../../assets/frutas/uvas.jpeg"},
   ];
   constructor(private router:Router,private http:RestService,private route:ActivatedRoute){} 
-  ngOnInit(): void {
-    this.saludar();
+
+  ngOnInit(): void {}
+
+  Add(producto:string){
+    console.log(producto);
+    this.http.add_to_mi_lista(producto);
   }
-  saludar(){
-    console.log("entró");
-  }
+  
 }
 
 
