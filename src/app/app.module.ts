@@ -43,7 +43,7 @@ import { SearchPipe } from './search.pipe';
     AppRoutingModule,
     NoopAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

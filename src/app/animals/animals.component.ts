@@ -3,6 +3,7 @@ import { RestService } from '../rest.service';
 import { ActivatedRoute,NavigationExtras,Router } from '@angular/router';
 import { SearchDataPipe } from '../search-data.pipe';
 
+
 @Component({
   selector: 'app-animals',
   templateUrl: './animals.component.html',
@@ -43,7 +44,6 @@ export class AnimalsComponent implements OnInit {
     {nombre:"postre manzana verde",url:"../../assets/Postres/postre9.jpeg"},
     {nombre:"Postre manzana verde",url:"../../assets/Postres/postre9.jpeg"},
   ];
-
   constructor(private router:Router,private http:RestService,private route:ActivatedRoute){} 
 
   ngOnInit(): void {
