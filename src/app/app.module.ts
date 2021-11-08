@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { AnimalsComponent } from './animals/animals.component';
+import { ProductosComponent } from './productos/productos.component';
 import { LocationComponent } from './location/location.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,7 +25,7 @@ import { SearchPipe } from './search.pipe';
   declarations: [
     AppComponent,
     AboutUsComponent,
-    AnimalsComponent,
+    ProductosComponent,
     LocationComponent,
     ContactComponent,
     NavBarComponent,

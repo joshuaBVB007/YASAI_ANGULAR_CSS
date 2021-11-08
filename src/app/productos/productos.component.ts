@@ -5,12 +5,12 @@ import { SearchDataPipe } from '../search-data.pipe';
 
 
 @Component({
-  selector: 'app-animals',
-  templateUrl: './animals.component.html',
-  styleUrls: ['./animals.component.css']
+  selector: 'app-productos',
+  templateUrl: './productos.component.html',
+  styleUrls: ['./productos.component.css']
 })
 
-export class AnimalsComponent implements OnInit {
+export class ProductosComponent implements OnInit {
 
   tipo_producto="";
   //lista por defecto necesaria para que no nos de error de compilacion

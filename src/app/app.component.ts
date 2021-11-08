@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatomoTracker } from '@ngx-matomo/tracker';
 
 
 @Component({
@@ -10,11 +9,10 @@ import { MatomoTracker } from '@ngx-matomo/tracker';
 
 export class AppComponent implements OnInit{
   title='Natural life';
-  constructor(private tracker: MatomoTracker){
+  constructor(){
   }  
   ngOnInit(): void {
-    this.tracker.setUserId('Jonathan Ascencio');
-    this.tracker.trackEvent('category', 'action', 'name', 3);
+    
   }
 }
 
