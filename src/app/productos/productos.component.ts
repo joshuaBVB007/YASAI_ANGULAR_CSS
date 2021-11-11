@@ -4,6 +4,7 @@ import { ActivatedRoute,NavigationExtras,Router } from '@angular/router';
 import { SearchDataPipe } from '../search-data.pipe';
 
 
+
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',

@@ -1,16 +1,23 @@
-<div *ngFor="let item of lista">
-    <h1>{{item.nombre}}</h1> 
-    <img [src]="item.img" alt="">
-    <div class="marco_texto">
-        <blockquote [style.color]="fontColor">
-            One million species are at risk of extinction and people all over the world are already feeling the effects of climate crisis.
-            Scientists say we have a little over 10 years left to avoid the worst impacts of climate change.
-            Protecting and restoring forests is one of the best defences we have against climate breakdown.
-            Yet some of the biggest brands in the world are still profiting from forest destruction.
-            10 years ago, hundreds of the world’s biggest companies made a promise to end forest destruction by 2020.
-            With only a few months left, they are nowhere near this goal.
-            #ForestsAreLife
-            <button (click)="onEditClick()" [disabled]="canEdit">{{message}}</button>
-        </blockquote>
+<div class="principal">
+    <div class="content">
+        <h1>Discover a unique experience</h1>
+        <h6>We bring professional chefs to your home to prepare
+            delicious,customized meals at a fraction of the cost
+        </h6>
+        <button>Choose a plan</button>
+    </div>
+    <img src="../../assets/manzana_banana.png" alt="" srcset="">
+</div>
+
+<div class="etiquetas_contenido">
+    <div class="etiqueta">
+        <h1>Naturaleza</h1>
+    </div>
+    <div class="etiqueta">
+        <h1>Naturaleza</h1>
+    </div>
+    <div class="etiqueta">
+        <h1>Naturaleza</h1>
     </div>
 </div>
+

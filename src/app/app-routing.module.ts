@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { InfoProductComponent } from './info-product/info-product.component';
 import { LocationComponent } from './location/location.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { PayoutComponent } from './payout/payout.component';
 
 
 //Array de rutas validado
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:"products",component:ProductosComponent},
   {path:"contact",component:ContactComponent},
   {path:"location",component:LocationComponent},
+  {path:"payout/:lista",component:PayoutComponent},
   {path:"details/:img/:nombre_producto",component:ProductDetailComponent,
   children:[
     {path:"info",component:InfoProductComponent},

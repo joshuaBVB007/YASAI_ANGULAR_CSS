@@ -1,23 +1,41 @@
-<div>
-    <h1>{{nombre_recibido}}</h1>
-    <img src="{{url_recibida}}" alt="" srcset="">
-    <p> Piña es una especie de la familia de las bromeliáceas,
+<div class="principal">
+    <!-- datos es el contenedor del titulo,imagen,y una descripcion -->
+    <div class="datos">
+        <h1>{{nombre_recibido}}</h1>
+        <img src="{{url_recibida}}" alt="" srcset="">
+        <p> Piña es una especie de la familia de las bromeliáceas,
         nativa de América del Sur. Planta de escaso porte y con hojas duras
         y lanceoladas de hasta 1 m de largo, fructifica una vez al año produciendo
         un único fruto fragante y dulce, muy apreciado en gastronomía.
-    </p>
-    <p>
-        La piña contiene:
-        Vitaminas: vitamina C, B1, B6, B9 (ácido fólico) y un poco de vitamina E.
-        Minerales: potasio, fósforo, magnesio, yodo, cobre y manganeso, entre otros.
-        Ácidos: ácido cítrico, ácido málico, ácido oxálico y enzima bromelina.
-    </p>
-    <p>
-        En cuanto al resto de su composición, posee alrededor de un 11% de hidratos de carbono, la mayor parte de los cuales son azúcares de asimilación rápida (sacarosa y fructosa). Apenas contiene grasa ni proteínas, lo que la convierte en una aliada en dietas de adelgazamiento y control de peso. La piña aporta unas 50 calorías por cada 100 gramos, aunque en almíbar ligero su aporte puede aumentar levemente. 
-        Los almíbares concentrados añaden alrededor de 30 calorías, por lo que es recomendable tomarla en su jugo.
-    </p>
-    <button (click)="go()">GO RELATIVE METHOD</button>
+        </p>
+        <button class="vitamina" (click)="showVitaminas()">Vitaminas</button>
+        <button class="info" (click)="showinfo_extra()">Info extra</button>
+        <button class="pais"  (click)="showinfo_pais_procedencia()">Pais procedencia</button>
+    </div>
+
+    <div class="details">
+        <div class="vitamina" *ngIf="vitaminas">
+            <p>
+                Vitaminas:
+                Vitaminas: vitamina C, B1, B6, B9 (ácido fólico) y un poco de vitamina E.
+                Minerales: potasio, fósforo, magnesio, yodo, cobre y manganeso, entre otros.
+                Ácidos: ácido cítrico, ácido málico, ácido oxálico y enzima bromelina.
+            </p>
+        </div>
+        <div class="info" *ngIf="info_extra">
+            <p>
+                En cuanto al resto de su composición, posee alrededor de un 11% de hidratos de carbono, la mayor parte de los cuales son azúcares de asimilación rápida (sacarosa y fructosa). Apenas contiene grasa ni proteínas, lo que la convierte en una aliada en dietas de adelgazamiento y control de peso. La piña aporta unas 50 calorías por cada 100 gramos, aunque en almíbar ligero su aporte puede aumentar levemente. 
+                Los almíbares concentrados añaden alrededor de 30 calorías, por lo que es recomendable tomarla en su jugo.
+            </p>
+        </div>
+        <div class="pais" *ngIf="pais_procedencia">
+            <p>
+                Pais procendecia:El salvador
+            </p>
+        </div>
+    </div>
+    <!-- <button (click)="go()">GO RELATIVE METHOD</button>
     <button routerLink="./info">GO ROUTERLINK</button>
-    <router-outlet></router-outlet>
+    <router-outlet></router-outlet> -->
 </div>
 

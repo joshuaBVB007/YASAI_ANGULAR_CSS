@@ -1,8 +1,10 @@
-<div>
+<div class="search">
         <input type="text" placeholder="Articulo que buscas?">
+        <img src="../../assets/search.png" alt="" srcset="">
         <button>Buscar</button>
 </div>
 <br>
+<!-- Para aplicar un boton de noche y dia -->
 <app-tool-bar></app-tool-bar>
 <div class="menu">
         <div (click)="cambio('postres')">
@@ -24,25 +26,28 @@
                 <div *ngFor="let item of frutas" class="card">
                         <img [routerLink]="['/details',item.url,item.nombre]" [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
-                        <button (click)="Add(item.nombre)"  class="btn_interno">Add</button>
+                        <button (click)="Add(item.nombre)"  class="btn_interno">add to cart</button>
+                        <button (click)="Add(item.nombre)"  class="btn_interno">add to favorite</button>
                 </div>
         </ul>
         <ul *ngSwitchCase="'postres'" >
                 <div *ngFor="let item of postres" class="card">
                         <img [routerLink]="['/details',item.url,item.nombre]" [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
-                        <button (click)="Add(item.nombre)"  class="btn_interno">Add</button>
+                        <button (click)="Add(item.nombre)"  class="btn_interno">add to cart</button>
+                        <button (click)="Add(item.nombre)"  class="btn_interno">add to favorite</button>
                 </div>
         </ul>
         <ul *ngSwitchCase="'smoothies'" >
                 <div *ngFor="let item of smoothies" class="card">
                         <img [routerLink]="['/details',item.url,item.nombre]" [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
-                        <button (click)="Add(item.nombre)"  class="btn_interno">Add</button>
+                        <button (click)="Add(item.nombre)"  class="btn_interno">add to cart</button>
+                        <button (click)="Add(item.nombre)"  class="btn_interno">add to favorite</button>
                 </div>
         </ul>
 </div>
-<h1 class="options">Hola</h1>
+<h1 class="options">Salto de linea forzado</h1>
 <app-pagination></app-pagination>
 
 

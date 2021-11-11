@@ -1,13 +1,36 @@
+
+
+
+
 div{
     width: 50%;margin: auto;
 }
+
+.search{
+    position: relative;
+}
+
+.search img{
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.search input[placeholder]{
+    color: green;
+    padding-left: 50px;
+}
+
 input{
     display: block;border-radius: 8px;border-color: black;
     width: 100%; padding: 6px; font-weight: bold;border-width: 5px;
 }
 button{
-    background-color: black;padding: 5px; border-radius: 8px;border-color: transparent;
-    color: white;margin-top: 6px;
+    background-color: black;padding: 5px;
+    border-radius: 8px;border-color: transparent;
+    color: white; font-weight: bold;margin-top: 6px;
 }
 /*Contenedor de cards*/
 .conCards{
@@ -32,7 +55,7 @@ h6{
 }
 /*Es el boton interno de cada card*/
 .btn_interno{
-    background-color:greenyellow;
+    background-color:coral;
     opacity: 0.8;
     border-radius: 0;
 }

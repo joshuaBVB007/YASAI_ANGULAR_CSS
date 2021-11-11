@@ -7,18 +7,30 @@ import { ActivatedRoute,Router } from '@angular/router';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
+  vitaminas:boolean=false;
+  info_extra:boolean=false;
+  pais_procedencia:boolean=false;
+
   url_recibida="";
   nombre_recibido="";
-  constructor(private router:Router,private route:ActivatedRoute) {
-    
-  }
+  constructor(private router:Router,private route:ActivatedRoute) {}
   ngOnInit(): void {
     this.url_recibida=this.route.snapshot.params['img'];
     this.nombre_recibido=this.route.snapshot.params['nombre_producto'];
   }
 
-  go(){
-    console.log("Yendo a info en ruta relativa");
-    this.router.navigate(['info'], { relativeTo: this.route });
+  showVitaminas(){
+    this.vitaminas=true;
   }
+  showinfo_extra(){
+    this.info_extra=true;
+  }
+  showinfo_pais_procedencia(){
+    this.pais_procedencia=true;
+  }
+
+  // go(){
+  //   console.log("Yendo a info en ruta relativa");
+  //   this.router.navigate(['info'], { relativeTo: this.route });
+  // }
 }
