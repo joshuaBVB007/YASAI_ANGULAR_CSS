@@ -45,11 +45,12 @@ export class ProductosComponent implements OnInit {
     {nombre:"postre manzana verde",id:21,url:"../../assets/Postres/postre9.jpeg"},
     {nombre:"Postre manzana verde",id:22,url:"../../assets/Postres/postre9.jpeg"},
   ];
-  constructor(private router:Router,private http:RestService,private route:ActivatedRoute){} 
+  constructor(private router:Router,private service:RestService,private route:ActivatedRoute){} 
 
   ngOnInit(): void {
       this.tipo_producto='frutas';
-      this.http.pagina_cliente_esta=='productos';
+      this.service.que_es="productos";
+      
   }
 
   cambio(dato:string){
@@ -57,9 +58,7 @@ export class ProductosComponent implements OnInit {
   }
 
   Add(producto:string){
-    console.log("Agregaste al carrito "+producto);
-    this.http.add_to_mi_lista(producto);
-    this.http.pagina_cliente_esta=='productos';
+    this.service.add_to_mi_lista(producto);
   }
   
 }

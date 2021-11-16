@@ -14,8 +14,8 @@ export class PayoutComponent implements OnInit {
   constructor(private route:ActivatedRoute,private service:RestService) { }
 
   ngOnInit(): void {
-    this.lista_op=this.service.productos_anadidos_al_carrito;
-    this.service.pagina_cliente_esta="payout";
+    this.service.que_es="payout";
+    this.lista_op=this.service.productos_en_el_carrito;
   }
 
 }
