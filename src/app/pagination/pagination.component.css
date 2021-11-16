@@ -5,12 +5,11 @@ div{
     width: 100%;
     border-color: black;
     border-width: 5px;
-    background-color: greenyellow;
-    opacity: 0.8;
+    background-color: rgb(7, 19,87);
 }
 h6{
     float: right;
-    color:black;
+    color:pink;
     font-weight: bold;
     margin-top: 20px;
     margin-right: 10px;

@@ -1,8 +1,7 @@
 /*Contenedor principal*/
 .header{
     position: relative;
-    background-color: greenyellow;
-    opacity: 0.8;
+    background-color: rgb(226, 73, 99);;
 }
 
 /*Las 2 imagenes del costado derecho*/
@@ -27,9 +26,18 @@ nav ul{
 /*list items de la barra de navegacion*/
 nav ul li{
     display: inline-block;
+    padding: 6px;
     list-style: none;
     margin: 0 10px;
 }
+
+nav ul li:hover{
+    text-decoration-line: underline;
+    text-decoration-style: solid ;
+    text-decoration-color: black;
+    text-decoration-thickness: 6px;
+}
+
 
 /*Etiquetas ancla de la barra de navegacion*/
 nav ul li a{

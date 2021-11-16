@@ -24,26 +24,29 @@
 <div  [ngSwitch]="tipo_producto" class="conCards">
         <ul *ngSwitchCase="'frutas'" >
                 <div *ngFor="let item of frutas" class="card">
-                        <img [routerLink]="['/details',item.url,item.nombre]" [src]="item.url" alt="r">
+                        <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <button (click)="Add(item.nombre)"  class="btn_interno">add to cart</button>
                         <button (click)="Add(item.nombre)"  class="btn_interno">add to favorite</button>
+                        <button [routerLink]="['/details',item.url,item.nombre]"  class="btn_interno">see details</button>
                 </div>
         </ul>
         <ul *ngSwitchCase="'postres'" >
                 <div *ngFor="let item of postres" class="card">
-                        <img [routerLink]="['/details',item.url,item.nombre]" [src]="item.url" alt="r">
+                        <img [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <button (click)="Add(item.nombre)"  class="btn_interno">add to cart</button>
                         <button (click)="Add(item.nombre)"  class="btn_interno">add to favorite</button>
+                        <button [routerLink]="['/details',item.url,item.nombre]"  class="btn_interno">see details</button>
                 </div>
         </ul>
         <ul *ngSwitchCase="'smoothies'" >
                 <div *ngFor="let item of smoothies" class="card">
-                        <img [routerLink]="['/details',item.url,item.nombre]" [src]="item.url" alt="r">
+                        <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <button (click)="Add(item.nombre)"  class="btn_interno">add to cart</button>
                         <button (click)="Add(item.nombre)"  class="btn_interno">add to favorite</button>
+                        <button [routerLink]="['/details',item.url,item.nombre]"  class="btn_interno">see details</button>
                 </div>
         </ul>
 </div>
