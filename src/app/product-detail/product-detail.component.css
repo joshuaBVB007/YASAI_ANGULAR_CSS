@@ -3,47 +3,58 @@
     margin: auto;
     position: relative;
 }
-.datos{
-    position: absolute;
-    top:0;
-}
-.details{
-    position: absolute;
-    top: 200px;
-}
-button{
-    margin: 4px;
-}
-.vitamina{
-    border-radius: 20px;
-    padding: 10px;
-    background-color: rgb(1, 255, 35);
-    color: black;
-    font-weight: bold;
-    border:none
-}
-.info{
-    border-radius: 20px;
-    padding: 10px;
-    background-color: rgb(0, 255, 242);
-    color: black;
-    font-weight: bold;
-    border:none
-}
-.pais{
-    border-radius: 20px;
-    padding: 10px;
-    background-color:rgb(255, 0, 234);
-    color: black;
-    font-weight: bold;
-    border:none
-}
-
-
-img{
-    float: left;margin-right: 30px;
-}
 p{
-    color: black;letter-spacing: 0px;font-weight: bold;
+    color: black;
+    font-weight: bold;
+}
+h1{
+    text-align: center;
+}
+img{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+button{
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vitamina{
+    background-color: greenyellow;
+}
+
+.info{
+    background-color: pink;
+}
+
+.pais{
+    background-color: grey;
+}
+
+.vitaminas{
+    background-color: greenyellow;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 4px;
+}
+
+.infos{
+    background-color: pink;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 4px;
+}
+
+.paiss{
+    background-color:grey;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 4px;
 }
 

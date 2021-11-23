@@ -11,12 +11,15 @@ export class ProductDetailComponent implements OnInit {
   info_extra:boolean=false;
   pais_procedencia:boolean=false;
 
-  url_recibida="";
-  nombre_recibido="";
+  new_url:any;
+  new_nombre="";
+  new_desc="";
   constructor(private router:Router,private route:ActivatedRoute) {}
   ngOnInit(): void {
-    this.url_recibida=this.route.snapshot.params['img'];
-    this.nombre_recibido=this.route.snapshot.params['nombre_producto'];
+    this.new_nombre=this.route.snapshot.params['nombre'];
+    this.new_url=this.route.snapshot.params['url'];
+    this.new_desc=this.route.snapshot.params['desc']
+    console.log(this.new_desc);
   }
 
   showVitaminas(){

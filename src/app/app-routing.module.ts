@@ -23,7 +23,7 @@ const routes: Routes = [
       component: MiListaComponent, // child route component that the router renders
     },
   ]},
-  {path:"details/:img/:nombre_producto",component:ProductDetailComponent,
+  {path:"details/:nombre",component:ProductDetailComponent,
   children:[
     {path:"info",component:InfoProductComponent},
   ]

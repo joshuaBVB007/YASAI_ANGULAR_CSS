@@ -1,12 +1,35 @@
+<!-- Buscador -->
 <div class="search">
-        <input type="text" placeholder="Articulo que buscas?">
-        <img src="../../assets/search.png" alt="" srcset="">
-        <button>Buscar</button>
+        <input class="input-search" type="text" placeholder="Articulo que buscas?">
+        <img class="img-search" src="../../assets/Productos/search.png" alt="" srcset="">
+        <button [ngClass]="btn_buscar">Buscar</button>
 </div>
+
+
 <br>
+
+<div  class="milista">
+        <div class="interno">
+                <img src="../../assets/Flaticon_icons/wishlist.png" alt="bolsadelacompra">
+                <span>
+                        <app-mi-lista></app-mi-lista>
+                </span>
+        </div>
+</div>
+
+
 <!-- Para aplicar un boton de noche y dia -->
 <app-tool-bar></app-tool-bar>
-<div class="menu">
+
+
+<div class="opciones_menu">
+        <img (click)="changeStyle('cereza')" src="../../assets/Productos/Logos_cambio_color/fresa.png" alt="" srcset="">
+        <img (click)="changeStyle('manzana')" src="../../assets/Productos/Logos_cambio_color/manzana.png" alt="" srcset="">
+        <img (click)="changeStyle('uvas')" src="../../assets/Productos/Logos_cambio_color/uvas_.png" alt="" srcset="">
+</div>
+
+<!-- MENUS CON POSTRES,SMOOTHIES Y FRUTAS -->
+<div [ngClass]="disenio_menu">
         <div (click)="cambio('postres')">
             <img src="../../assets/Flaticon_icons/cupcake.png" alt="smoothie">
             <h6>Postres</h6>
@@ -21,35 +44,62 @@
         </div>
     </div>
 <h1></h1>
+
+<!-- CARDS DE LOS PRODUCTOS -->
 <div  [ngSwitch]="tipo_producto" class="conCards">
         <ul *ngSwitchCase="'frutas'" >
                 <div *ngFor="let item of frutas" class="card">
                         <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
-                        <button (click)="Add(item.nombre)"  class="btn_interno">add to cart</button>
-                        <button (click)="Add(item.nombre)"  class="btn_interno">add to favorite</button>
-                        <button [routerLink]="['/details',item.url,item.nombre]"  class="btn_interno">see details</button>
+                        <div>
+                                <button (click)="Add(item.nombre)"  [ngClass]="btn_disenio">
+                                        <img src="../../assets/Flaticon_icons/add-cart.png" alt="" srcset="">
+                                </button>
+                                <button (click)="Add(item.nombre)"  [ngClass]="btn_disenio">
+                                        <img src="../../assets/Productos/marcador-de-favoritos.png" alt="" srcset="">
+                                </button>
+                                <button [routerLink]="['/details',item.nombre,{url:item.url,desc:item.descripcion}]"   [ngClass]="btn_disenio">
+                                        <img src="../../assets/Productos/info.png" alt="" srcset="">
+                                </button>
+                        </div>
                 </div>
         </ul>
         <ul *ngSwitchCase="'postres'" >
                 <div *ngFor="let item of postres" class="card">
                         <img [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
-                        <button (click)="Add(item.nombre)"  class="btn_interno">add to cart</button>
-                        <button (click)="Add(item.nombre)"  class="btn_interno">add to favorite</button>
-                        <button [routerLink]="['/details',item.url,item.nombre]"  class="btn_interno">see details</button>
+                        <div>
+                                <button (click)="Add(item.nombre)"  [ngClass]="btn_disenio">
+                                        <img src="../../assets/Flaticon_icons/add-cart.png" alt="" srcset="">
+                                </button>
+                                <button (click)="Add(item.nombre)"  [ngClass]="btn_disenio">
+                                        <img src="../../assets/Productos/marcador-de-favoritos.png" alt="" srcset="">
+                                </button>
+                                <button [routerLink]="['/details',item.nombre,{url:item.url,desc:item.descripcion}]"   [ngClass]="btn_disenio">
+                                        <img src="../../assets/Productos/info.png" alt="" srcset="">
+                                </button>
+                        </div>
                 </div>
         </ul>
         <ul *ngSwitchCase="'smoothies'" >
                 <div *ngFor="let item of smoothies" class="card">
                         <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
-                        <button (click)="Add(item.nombre)"  class="btn_interno">add to cart</button>
-                        <button (click)="Add(item.nombre)"  class="btn_interno">add to favorite</button>
-                        <button [routerLink]="['/details',item.url,item.nombre]"  class="btn_interno">see details</button>
+                        <div>
+                                <button (click)="Add(item.nombre)"  [ngClass]="btn_disenio">
+                                        <img src="../../assets/Flaticon_icons/add-cart.png" alt="" srcset="">
+                                </button>
+                                <button (click)="Add(item.nombre)"  [ngClass]="btn_disenio">
+                                        <img src="../../assets/Productos/marcador-de-favoritos.png" alt="" srcset="">
+                                </button>
+                                <button [routerLink]="['/details',item.nombre,{url:item.url,desc:item.descripcion}]"   [ngClass]="btn_disenio">
+                                        <img src="../../assets/Productos/info.png" alt="" srcset="">
+                                </button>
+                        </div>
                 </div>
         </ul>
 </div>
+
 <h1 class="options">Salto de linea forzado</h1>
 <app-pagination></app-pagination>
 

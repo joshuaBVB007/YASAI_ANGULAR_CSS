@@ -11,6 +11,12 @@ export class PayoutComponent implements OnInit {
 
   lista_op:string[]=[];
 
+  list=[
+    {nom:"manolo",precio:1.2},
+    {nom:"cereza",precio:1.2},
+    {nom:"jabon",precio:1.2},
+  ]
+
   constructor(private route:ActivatedRoute,private service:RestService) { }
 
   ngOnInit(): void {

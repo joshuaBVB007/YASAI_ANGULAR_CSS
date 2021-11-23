@@ -1,33 +1,76 @@
-div{
-    width: 50%;margin: auto;
-}
-
+/* DIV QUE CONTIENE RECURSOS DEL SEARCH  */
 .search{
+    width: 50%;margin: auto;
     position: relative;
 }
-
 .search img{
-    position: absolute;
-    top: 6px;
-    left: 10px;
-    width: 30px;
-    height: 30px;
+    position: absolute;top: 6px;
+    left: 10px;width: 30px;height: 30px;
 }
-
 .search input[placeholder]{
-    color: rgb(226, 73, 99);
-    padding-left: 50px;
+    color: black; padding-left: 50px;
 }
-
 input{
     display: block;border-radius: 8px;border-color: black;
     width: 100%; padding: 6px; font-weight: bold;border-width: 5px;
 }
-button{
+.btn-search{
     background-color:rgb(226, 73, 99);padding: 5px;
+    float: left;
     border-radius: 8px;border-color: transparent;
     color:black; font-weight: bold;margin-top: 6px;
 }
+.btn-search-uva{
+    background-color:rgb(184, 29, 223);padding: 5px;
+    
+    float: left;
+    border-radius: 8px;border-color: transparent;
+    color:black; font-weight: bold;margin-top: 6px;
+}
+.btn-search-manzana{
+    background-color:greenyellow;padding: 5px;
+    float: left;
+    border-radius: 8px;border-color: transparent;
+    color:black; font-weight: bold;margin-top: 6px;
+}
+/* FIN DE SEARCH */
+
+
+
+/* MIlista */
+.milista{
+    position: fixed;top: 300px;left: 0;
+}
+.milista .interno{
+    position: relative;
+}
+.milista .interno span{
+    position: absolute;left: 50px;
+    top: 0;font-weight: bold;
+    visibility: hidden;
+}
+.milista .interno:hover span{
+    position: absolute;left: 50px;top: 0;
+    font-weight: bold;visibility: visible;
+}
+.milista .interno img{
+    width: 60px;height: 60px;
+}
+
+
+/* contenedor opciones */
+.opciones_menu{
+    position: fixed;
+    top: 500px;
+}
+
+.opciones_menu img{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+
 /*Contenedor de cards*/
 .conCards{
     width: 60%;margin: auto;clear: left;
@@ -42,6 +85,13 @@ ul{
     width: 30%;border:none;
     border-width: 4px;margin: 6px;
 }
+
+.card button img{
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+}
+
 img{
     display: block;
     width: 50%;height: 100px;margin: auto;
@@ -53,11 +103,38 @@ h6{
 /*Es el boton interno de cada card*/
 .btn_interno{
     background-color:rgb(226, 73, 99);
-    display: inline;
-    width: 100%;
+    width: 20%;
+    float: left;
     color: black;
+    font-weight: bold;
+    margin: 2px;
+    border: none;
     border-radius: 20px;
 }
+
+.btn_interno-uva{
+    background-color: rgb(184, 29, 223);
+    width: 20%;
+    float: left;
+    color: black;
+    font-weight: bold;
+    margin: 2px;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn_interno-manzana{
+    background-color:greenyellow;
+    width: 20%;
+    color: black;
+    float: left;
+    font-weight: bold;
+    margin: 2px;
+    border: none;
+    border-radius: 20px;
+}
+
+
 .options{
     clear: left;
     visibility: hidden;
@@ -73,16 +150,79 @@ h6{
     border-radius: 10px;
     padding: 10px;
 }
+
+.menu-uva{
+    position: fixed;
+    top: 140px;
+    right: 0;
+    width: 10%;
+    background-color: rgb(184, 29, 223);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.menu-manzana{
+    position: fixed;
+    top: 140px;
+    right: 0;
+    width: 10%;
+    background-color:greenyellow;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 .menu div{
     width: 100%;
     cursor: pointer;
 }
+.menu-uva div{
+    width: 100%;
+    cursor: pointer;
+}
+.menu-manzana div{
+    width: 100%;
+    cursor: pointer;
+}
+
+
 .menu div h6{
     color: black;
     text-align: center;
     font-weight: bold;
     font-size: 20px;
 }
+.menu-uva div h6{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.menu-manzana div h6{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu div img{
+    display: block;
+    margin: auto;
+    height: 30px;
+    width: 30px;
+}
+.menu-uva div img{
+    display: block;
+    margin: auto;
+    height: 30px;
+    width: 30px;
+}
+.menu-manzana div img{
+    display: block;
+    margin: auto;
+    height: 30px;
+    width: 30px;
+}
+
 .menu div h6:hover{
     text-decoration-line: underline;
     text-decoration-style: solid ;
@@ -91,12 +231,7 @@ h6{
 }
 
 
-.menu div img{
-    display: block;
-    margin: auto;
-    height: 30px;
-    width: 30px;
-}
+
 /*Diseño para dispositivos moviles*/
 @media only screen and (max-width:540px){
     .conCards{
