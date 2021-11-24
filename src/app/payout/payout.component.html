@@ -1,7 +1,16 @@
 <h1>My List</h1>
 
 <div  class="lista_A_vender" *ngFor="let item of list">
-    <h1>{{item.nom}}</h1>
-    <h1>{{item.precio}}</h1>
+    <h6>Nombre Producto: {{item.nom}}</h6>
+    <img class="type" src="../../assets/Flaticon_icons/smoothie.png" alt="" srcset="">
+    <h6>Precio: {{item.precio}} €</h6>
+    <img class="trash" src="../../assets/Flaticon_icons/delete.png" alt="" srcset="">
 </div>
+
+
+<div class="total">
+    <h2>Total: 50€ </h2>
+    <button>Payout</button>
+</div>
+
 

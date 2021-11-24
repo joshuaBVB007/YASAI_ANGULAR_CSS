@@ -2,8 +2,8 @@
     /* position relative es necesario para luego usar objetos absolutos dentrod de el*/
     position: relative;
     width:100%;height: 100vh;margin: auto;
-    background-color: rgb(7, 19,87);
-    color: white;
+    background-color: rgb(78, 228,183);
+    color: black;
 }
 .mapa{
     width: 100%;

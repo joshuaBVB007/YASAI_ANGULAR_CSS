@@ -3,18 +3,31 @@ div{
     bottom: 0;
     height: 60px;
     width: 100%;
-    border-color: black;
-    border-width: 5px;
-    background-color: rgb(7, 19,87);
+    background-color: rgb(78, 228, 183);
 }
 h6{
     float: right;
-    color:white;
+    color:black;
     font-weight: bold;
     margin-top: 20px;
     margin-right: 10px;
 }
 
+.derecho{
+    float: left;
+    margin-left: 8px;
+}
+
+img{
+    margin: 10px 0px 0px 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.javascript{
+    width: 40px;
+    height: 40px;
+}
 
 .example-h2 {
 margin: 10px;

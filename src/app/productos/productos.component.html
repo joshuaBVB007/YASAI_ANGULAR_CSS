@@ -1,10 +1,9 @@
 <!-- Buscador -->
 <div class="search">
-        <input class="input-search" type="text" placeholder="Articulo que buscas?">
+        <input id="input-search" [(ngModel)]='dato' type="text" placeholder="Articulo que buscas?">
         <img class="img-search" src="../../assets/Productos/search.png" alt="" srcset="">
-        <button [ngClass]="btn_buscar">Buscar</button>
+        <button [ngClass]="btn_buscar" >Buscar</button>
 </div>
-
 
 <br>
 
@@ -48,7 +47,7 @@
 <!-- CARDS DE LOS PRODUCTOS -->
 <div  [ngSwitch]="tipo_producto" class="conCards">
         <ul *ngSwitchCase="'frutas'" >
-                <div *ngFor="let item of frutas" class="card">
+                <div *ngFor="let item of frutas | search:dato" class="card">
                         <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <div>

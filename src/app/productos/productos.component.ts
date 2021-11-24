@@ -4,14 +4,13 @@ import { ActivatedRoute,NavigationExtras,Router } from '@angular/router';
 import { SearchDataPipe } from '../search-data.pipe';
 
 
-
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
 
-export class ProductosComponent implements OnInit {
+export class ProductosComponent implements OnInit{
 
   tipo_producto="";
   //lista por defecto necesaria para que no nos de error de compilacion
@@ -74,7 +73,12 @@ export class ProductosComponent implements OnInit {
   btn_disenio="";
   btn_buscar="";
 
+  //Propiedad utilizada en el filtro del buscador
+  dato:string="";
+
   constructor(private router:Router,private service:RestService,private route:ActivatedRoute){} 
+
+
 
   ngOnInit(): void {
       this.tipo_producto='frutas';
@@ -100,16 +104,13 @@ export class ProductosComponent implements OnInit {
   cambio(dato:string){
     this.tipo_producto=dato;
   }
-
   changeStyle(style:string){
     this.service.ChangeCurrentConfig(style);
     this.ngOnInit();
   }
-
   Add(producto:string){
     this.service.add_to_mi_lista(producto);
-  }
-  
+  }  
 }
 
 
