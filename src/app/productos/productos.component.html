@@ -2,7 +2,6 @@
 <div class="search">
         <input id="input-search" [(ngModel)]='dato' type="text" placeholder="Articulo que buscas?">
         <img class="img-search" src="../../assets/Productos/search.png" alt="" srcset="">
-        <button [ngClass]="btn_buscar" >Buscar</button>
 </div>
 
 <br>
@@ -64,7 +63,7 @@
                 </div>
         </ul>
         <ul *ngSwitchCase="'postres'" >
-                <div *ngFor="let item of postres" class="card">
+                <div *ngFor="let item of postres | search:dato" class="card">
                         <img [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <div>
@@ -81,7 +80,7 @@
                 </div>
         </ul>
         <ul *ngSwitchCase="'smoothies'" >
-                <div *ngFor="let item of smoothies" class="card">
+                <div *ngFor="let item of smoothies | search:dato" class="card">
                         <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <div>
