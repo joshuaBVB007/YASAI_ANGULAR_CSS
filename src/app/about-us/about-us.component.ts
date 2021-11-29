@@ -11,4 +11,10 @@ export class AboutUsComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {}
 
+
+  sumar(){
+    // metodo que estuvimos probando en spec.ts
+    return 4;
+  }
+
 }

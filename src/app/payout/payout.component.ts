@@ -17,7 +17,7 @@ export class PayoutComponent implements OnInit {
     {nom:"jabon",precio:1.2},
   ]
 
-  constructor(private route:ActivatedRoute,private service:RestService) { }
+  constructor(private service:RestService) { }
 
   ngOnInit(): void {
     this.service.que_es="payout";

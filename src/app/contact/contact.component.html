@@ -1,10 +1,10 @@
 <div class="inputs">
     <h1>Contact us</h1>
-    <input class="uno" placeholder="Whole name" type="text">
-    <input class="dos" placeholder="E-mail" type="email">
-    <input class="tres" placeholder="How did you know us?" type="text">
-    <textarea class="cuatro" placeholder="Write something" cols="30" rows="4"></textarea>
-    <button>Send</button>
+    <input class="uno" placeholder="Whole name"  [(ngModel)]="whole_name" type="text">
+    <input class="dos" placeholder="E-mail" [(ngModel)]="mail" type="email">
+    <input class="tres" placeholder="How did you know us?" [(ngModel)]="knowus" type="text">
+    <textarea class="cuatro" placeholder="Write something" [(ngModel)]="something" cols="30" rows="4"></textarea>
+    <button (click)="GetOpinion()">Send</button>
 </div>
 <img src="../../assets/Contact/19948-contact-us.gif" alt="" srcset=""> 
 

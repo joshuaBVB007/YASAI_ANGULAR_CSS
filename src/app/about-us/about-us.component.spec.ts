@@ -4,6 +4,7 @@ import { AboutUsComponent } from './about-us.component';
 
 describe('AboutUsComponent', () => {
   let component: AboutUsComponent;
+
   let fixture: ComponentFixture<AboutUsComponent>;
 
   beforeEach(async () => {
@@ -19,7 +20,17 @@ describe('AboutUsComponent', () => {
     fixture.detectChanges();
   });
 
+
+  
+ 
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("method sumar must return a value > to 2",()=>{
+    expect(component.sumar()).toBeGreaterThan(2);
+  });
+
+
 });

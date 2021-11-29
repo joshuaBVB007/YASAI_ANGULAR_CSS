@@ -1,13 +1,12 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
-import { ActivatedRoute,NavigationExtras,Router } from '@angular/router';
-import { SearchDataPipe } from '../search-data.pipe';
+import { SearchPipe } from '../search.pipe';
 
 
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
-  styleUrls: ['./productos.component.css']
+  styleUrls: ['./productos.component.css'],
 })
 
 export class ProductosComponent implements OnInit{
@@ -76,7 +75,7 @@ export class ProductosComponent implements OnInit{
   //Propiedad utilizada en el filtro del buscador
   dato:string="";
 
-  constructor(private router:Router,private service:RestService,private route:ActivatedRoute){} 
+  constructor(private service:RestService){} 
 
 
 

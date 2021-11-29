@@ -16,14 +16,12 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { MiListaComponent } from './mi-lista/mi-lista.component';
 import { CounterComponent } from './counter/counter.component';
 import { InfoProductComponent } from './info-product/info-product.component';
-import { SearchDataPipe } from './search-data.pipe';
 import { SearchPipe } from './search.pipe';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
 import { PayoutComponent } from './payout/payout.component';
-
 
 
 
@@ -40,9 +38,8 @@ import { PayoutComponent } from './payout/payout.component';
     ToolBarComponent,
     ProductDetailComponent,
     MiListaComponent,
-    CounterComponent,
     InfoProductComponent,
-    SearchDataPipe,
+    CounterComponent,
     SearchPipe,
     PayoutComponent,
   ],
