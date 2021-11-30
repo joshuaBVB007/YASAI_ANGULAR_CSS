@@ -9,7 +9,7 @@
     width: 50px;margin-right: 20px;cursor: pointer;
 }
 .titulo{
-    font-weight: bold;font-size: x-large;color: black;
+    font-weight: bold;font-size: 2.0em;color: black;
 }
 
 /*Barra navegacion*/
@@ -28,7 +28,7 @@ nav ul li{
     display: inline-block;
     padding: 6px;
     list-style: none;
-    margin: 0 10px;
+    margin: 0 10px 10px 10px 0px;
 }
 
 nav ul li:hover{
@@ -43,4 +43,5 @@ nav ul li a{
     text-decoration: none;
     color: black;
     font-weight: bold;
+    font-size: 1.0em;
 }
