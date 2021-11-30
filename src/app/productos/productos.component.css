@@ -14,25 +14,7 @@ input{
     display: block;border-radius: 8px;border-color: black;
     width: 100%; padding: 6px; font-weight: bold;border-width: 5px;
 }
-#btn-search{
-    background-color:rgb(226, 73, 99);padding: 5px;
-    float: left;
-    border-radius: 8px;border-color: transparent;
-    color:black; font-weight: bold;margin-top: 6px;
-}
-.btn-search-uva{
-    background-color:rgb(184, 29, 223);padding: 5px;
-    
-    float: left;
-    border-radius: 8px;border-color: transparent;
-    color:black; font-weight: bold;margin-top: 6px;
-}
-.btn-search-manzana{
-    background-color:greenyellow;padding: 5px;
-    float: left;
-    border-radius: 8px;border-color: transparent;
-    color:black; font-weight: bold;margin-top: 6px;
-}
+
 /* FIN DE SEARCH */
 
 
@@ -56,6 +38,9 @@ input{
 .milista .interno img{
     width: 60px;height: 60px;
 }
+
+
+
 
 
 /* contenedor opciones */
@@ -103,7 +88,7 @@ h6{
 /*Es el boton interno de cada card*/
 .btn_interno{
     background-color:rgb(226, 73, 99);
-    width: 20%;
+    width: 100%;
     float: left;
     color: black;
     font-weight: bold;
@@ -114,7 +99,7 @@ h6{
 
 .btn_interno-uva{
     background-color: rgb(184, 29, 223);
-    width: 20%;
+    width: 100%;
     float: left;
     color: black;
     font-weight: bold;
@@ -125,11 +110,11 @@ h6{
 
 .btn_interno-manzana{
     background-color:greenyellow;
-    width: 20%;
+    width: 100%;
     color: black;
     float: left;
     font-weight: bold;
-    margin: 2px;
+    margin: 2px auto;
     border: none;
     border-radius: 20px;
 }
