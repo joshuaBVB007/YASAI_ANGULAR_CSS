@@ -61,7 +61,7 @@ input{
 /* contenedor opciones */
 .opciones_menu{
     position: fixed;
-    top: 500px;
+    top: 60%;
 }
 
 .opciones_menu img{

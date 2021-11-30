@@ -1,7 +1,7 @@
 /*Contenedor Principal*/
 .tool_bar{
     position: fixed;left: 0;
-    top: 140px;width: 3%;
+    top: 32%;width: 3%;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -37,3 +37,5 @@ img{
     font-weight: bold;visibility: visible;
     font-size: 8.8px;
 }
+
+
