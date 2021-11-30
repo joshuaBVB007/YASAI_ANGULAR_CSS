@@ -2,105 +2,71 @@
     position: relative;background-color:rgb(78, 228, 183);
     width: 100%;padding: 20px;
 }
-
-/* el mismo para las 3 configuraciones */
 .content{
     position: relative;width: 60%;left: 5%;
 }
-
-/* es la imagen de el contendor principal */
 .img_principal{
-    position: absolute;right: 10%;
-    top: 20%;width: 10%;height: 50%;
+    position: absolute;right: 10%;top: 20%;width: 14%;height: 50%;
 }
-
-
-/* etiquetas contenido es el contenedor de los 3 etiquetas rice power,etc */
+#demo{
+    width: 100%;margin: auto;
+}
 .etiquetas_contenido{
-    position: relative;
-    width: 80%;
-    margin: auto;
+    position: relative;width: 100%;margin: auto;
 }
 .card{
-    float: left;
-    border:none;
-    width: 30%;
-    margin: 6px;
+    float: left;border:none;width: 30%;margin: 6px;
 }
 .card-img-top{
-    display: block;
-    margin: auto;
-    border-radius: 50%;
-    width: 60%;
-    margin-bottom: 20px;
+    display: block;margin: auto;border-radius: 50%;width: 20%;margin-bottom: 20px;
 }
-
 .card-title,.card-text{
-    text-align: center;
-    font-size: 1em;
-    font-weight: bold;
-    color: black;
+    text-align: center;font-size: 1.0em;font-weight: bold;color: black;
 }
-
 .btn-tags{
-    background-color: rgb(78, 228, 183);
-    color: black;
-    border-radius: 20px;
-    padding: 5px;
-    font-weight: bold;
-    text-align: center;
+    background-color: rgb(78, 228, 183);color: black;width: 50%;margin: auto;
+    border-radius: 20px;padding: 5px;font-weight: bold;text-align: center;
+}
+p{
+    width: 80%;margin: auto;
 }
 h1{
-    text-align: left;font-size: 3.4em;
-    width: 60%;color:black;
+    text-align: left;font-size: 2.4em;width: 60%;color:black;
 }
 h6{
-    color:black;
-    font-size: 1.4em;
-    width: 60%;
+    color:black;font-size: 2.0em;width: 60%;
 }
 button{
-    background-color: none;
-    border: none;
+    background-color: none;border: none;
 }
-
 button.plan{
-    font-weight: bold;background-color:transparent;
-    padding: 10px;border:none;border: 2px solid black;
+    font-weight: bold;background-color:transparent;padding: 10px;border:none;border: 2px solid black;
 }
 
 
-/* se aplica este media query si los valores estan por de bajo de 780 */
-@media screen and (max-width:740px){
-    div{
-        position: relative;
-        width: 100%;
-    }
-    .content{
-        position: relative; width: 100%;
-    }
+@media screen and (max-width: 780px) and (min-width: 200px){
     h1{
-        text-align: left;font-size: xx-large;width: 60%;
+        text-align: left;font-size: 1.8em;width: 60%;color:black;
     }
     h6{
-        color: blue;font-weight: bold;font-size: x-small;
+        color:black;font-size: 1.0em;width: 100%;
     }
-    button{
-        width: 40%;height: 10%;padding: 2px;font-size: xx-small;
-    }
-    .content_one{
-        position: absolute;right: 10px;top: 24%;width: 16%;height: 50%;
+    button.plan{
+        font-size: 1.0em;
     }
     .card{
-        border:none;
-        width: 100%;
-        margin: 4px;
+        border:none;width: 100%;margin: 6px;
+    }
+    .card-img-top{
+        display: block;margin: auto;border-radius: 50%;width: 20%;margin-bottom: 20px;
+    }
+    .card-title{
+        text-align: center;font-size: 1.2em;
+        font-weight: bold;color: black;
+    }
+    .card-text{
+        text-align: center;font-size: 1.0em;
+        font-weight: bold;color: black;
     }
 }
 
-/* se aplca este media query si el ancho es mayor de 300 */
-/* @media screen and (min-width:300px){
-    h6{
-        color: hotpink;
-    }
-} */
