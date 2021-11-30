@@ -16,20 +16,11 @@
         <img (click)="changeStyle('uvas')" src="../../assets/Productos/Logos_cambio_color/uvas_.png" alt="" srcset="">
 </div>
 
-<!-- MENUS CON POSTRES,SMOOTHIES Y FRUTAS -->
-<div [ngClass]="disenio_menu">
-        <div (click)="cambio('postres')">
-            <img src="../../assets/Flaticon_icons/cupcake.png" alt="smoothie">
-            <h6>Postres</h6>
-        </div>
-        <div (click)="cambio('smoothies')">
-            <img src="../../assets/Flaticon_icons/smoothie.png" alt="smoothie">
-            <h6>Smoothie</h6>
-        </div>
-        <div (click)="cambio('frutas')">
-            <img src="../../assets/Flaticon_icons/frutas.png" alt="smoothie">
-            <h6>Frutas</h6>
-        </div>
+
+<div class="menu_productos">
+            <img src="../../assets/Flaticon_icons/cupcake.png" (click)="cambio('postres')" alt="smoothie">
+            <img src="../../assets/Flaticon_icons/smoothie.png" (click)="cambio('smoothies')" alt="smoothie">
+            <img src="../../assets/Flaticon_icons/frutas.png" (click)="cambio('frutas')" alt="smoothie">
     </div>
 <h1></h1>
 
@@ -87,6 +78,7 @@
                 </div>
         </ul>
 </div>
+
 
 <h1 class="options">Salto de linea forzado</h1>
 <app-pagination></app-pagination>

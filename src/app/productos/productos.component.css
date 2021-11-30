@@ -72,18 +72,15 @@ ul{
 }
 
 .card button img{
-    padding: 4px;
-    width: 40px;
-    height: 40px;
+    padding: 4px;width: 40px;height: 40px;
 }
-
 img{
     display: block;
     width: 50%;height: 100px;margin: auto;
     object-fit: cover;border-radius: 50%;
 }
 h6{
-    text-align: center; font-weight: bold;
+    text-align: center; font-weight: bold;font-size: 1.0em;
 }
 /*Es el boton interno de cada card*/
 .btn_interno{
@@ -96,7 +93,6 @@ h6{
     border: none;
     border-radius: 20px;
 }
-
 .btn_interno-uva{
     background-color: rgb(184, 29, 223);
     width: 100%;
@@ -107,7 +103,6 @@ h6{
     border: none;
     border-radius: 20px;
 }
-
 .btn_interno-manzana{
     background-color:greenyellow;
     width: 100%;
@@ -119,12 +114,23 @@ h6{
     border-radius: 20px;
 }
 
-
+/* esto es el salto de linea */
 .options{
     clear: left;
     visibility: hidden;
 }
 
+.menu_productos{
+    position: fixed;
+    top: 40%;
+    right: 2%;
+    border-radius: 10px;
+}
+
+.menu_productos img{
+    width: 40px;
+    height: 40px;
+}
 
 .menu{
     position: fixed;
@@ -229,7 +235,7 @@ h6{
         border-color: black;
     }
     h6{
-        font-size: 8px;
+        font-size: 1.0em;
         text-align: center;
     }
 }
