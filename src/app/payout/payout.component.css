@@ -11,6 +11,7 @@ button{
     border-radius: 10px;
 }
 
+
 button:hover{
     background-color: rgb(78, 228, 183);;
 }
@@ -45,8 +46,8 @@ img{
 
 .type{
     position: absolute;top: 10px;
-    left: 10px;width: 20%;height: 80%;
-    border-radius: 50%;
+    left: 0px;width: 20%;height: 80%;
+    border-radius: 50%;object-fit: cover;
 }
 .trash{
     position: absolute;top: 24px;
@@ -64,9 +65,63 @@ img{
 
 .lista_A_vender{
     position: relative;
-    width: 30%;
+    width: 50%;
     margin: 8px auto;
     /* border: 6px solid greenyellow; */
     border-radius: 20px;
     padding: 4px;
+}
+
+
+@media screen and (max-width: 760px) and (min-width: 200px){
+    .lista_A_vender{
+        position: relative;
+        width: 80%;
+        margin: 8px auto;
+        border-radius: 20px;
+        padding: 4px;
+    }
+    .type{
+        position: absolute;top: 10px;
+        left: 2px;width: 28%;height: 78%;
+        border-radius: 50%;object-fit: cover;
+    }
+    .trash{
+        position: absolute;top: 24px;
+        right: 20px;width: 32px;height: 32px;
+    }
+    h6{
+        color: black;text-align: center;
+        width: 50%;padding: 4px;
+        margin: 5px auto;font-size: 0.8em;
+    }
+    button{
+        background-color: transparent; color: black;
+        font-weight: bold;padding: 10px;font-size: small;
+        border: 4px solid black;
+        border-radius: 10px;
+    }
+    h2{
+        color: black;
+    }
+    .total{
+        position: fixed;bottom: 0;
+        left: 0;padding: 10px;
+        height: 20%;
+        border: none;border-radius: 10px;
+    }
+    img{
+        display: block;
+        margin: auto;
+        width: 40%;
+        height: 30%;
+    }
+    .cantidad{
+        border-radius: 10px;
+        width: 20%;
+        border: 4px solid black;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
 }
