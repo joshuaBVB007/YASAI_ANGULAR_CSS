@@ -5,18 +5,16 @@ div{
     width: 100%;
     background-color: rgb(78, 228, 183);
 }
-h6{
-    float: right;
-    color:black;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-right: 10px;
-}
 
-.derecho{
-    float: left;
-    margin-left: 8px;
+/* ambas etiquetas que aparecen: developed by y all rights reserved */
+h6{
+    float: right;color:black;font-weight: bold;
+    margin-top: 20px;margin-right: 10px;
 }
+.derecho{
+    float: left;margin-left: 8px;
+}
+/* fin etiquetas */
 
 img{
     margin: 10px 0px 0px 10px;
@@ -24,22 +22,17 @@ img{
     height: 40px;
 }
 
-.javascript{
-    width: 40px;
-    height: 40px;
+@media screen and (max-width: 760px) and (min-width: 200px){
+    h6{
+        font-size: 0.8em;
+    }
+    .derecho{
+        display: none;
+    }
+    img{
+        margin: 6% 0px 0px 10px;
+        width: 20px;
+        height: 20px;
+    }
 }
 
-.example-h2 {
-margin: 10px;
-}
-
-.example-section {
-display: flex;
-align-content: center;
-align-items: center;
-height: 60px;
-}
-
-.example-margin {
-margin: 10px;
-}
