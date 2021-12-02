@@ -22,6 +22,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { PayoutComponent } from './payout/payout.component';
+import { StageAreaComponent } from './stage-area/stage-area.component';
+
 
 
 
@@ -42,6 +44,7 @@ import { PayoutComponent } from './payout/payout.component';
     CounterComponent,
     SearchPipe,
     PayoutComponent,
+    StageAreaComponent,
   ],
   imports: [
     BrowserModule,

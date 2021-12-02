@@ -50,21 +50,21 @@ export class ProductosComponent implements OnInit{
     descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy text ever since the 1500s, "},    
   ];
   postres: any[]=[
-    {nombre:"cereales y fresa",id:17,url:"../../assets/Productos/Postres/postre2.jpeg",
+    {nombre:"Cereales y fresa",id:17,url:"../../assets/Productos/Postres/postre2.jpeg",
     descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy text ever since the 1500s, "},
     {nombre:"Mixto açaí",id:17,url:"../../assets/Productos/Postres/postre4.jpeg",
     descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy text ever since the 1500s, "},
-    {nombre:"leche y uvas",id:18,url:"../../assets/Productos/Postres/postre5.jpeg",
+    {nombre:"Leche y uvas",id:18,url:"../../assets/Productos/Postres/postre5.jpeg",
     descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy text ever since the 1500s, "},
     {nombre:"BananaMix",id:19,url:"../../assets/Productos/Postres/postre6.jpeg",
     descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy text ever since the 1500s, "},
-    {nombre:"leche y canela",id:20,url:"../../assets/Productos/Postres/postre7.jpeg",
+    {nombre:"Leche y canela",id:20,url:"../../assets/Productos/Postres/postre7.jpeg",
     descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy text ever since the 1500s, "},
-    {nombre:"leche y piña",id:21,url:"../../assets/Productos/Postres/postre8.jpeg",
+    {nombre:"Leche y piña",id:21,url:"../../assets/Productos/Postres/postre8.jpeg",
     descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy text ever since the 1500s, "},
-    {nombre:"postre manzana verde",id:21,url:"../../assets/Productos/Postres/postre9.jpeg",
+    {nombre:"Manzana verde",id:21,url:"../../assets/Productos/Postres/postre9.jpeg",
     descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy text ever since the 1500s, "},
-    {nombre:"Postre manzana verde",id:22,url:"../../assets/Productos/Postres/postre9.jpeg",
+    {nombre:"Manzana verde",id:22,url:"../../assets/Productos/Postres/postre9.jpeg",
     descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy text ever since the 1500s, "},
 
   ];

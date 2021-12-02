@@ -4,11 +4,11 @@
 <!-- <img class="flecha" src="../../assets/Payout/return.png" alt="" srcset=""> -->
 
 
-<div  class="lista_A_vender" *ngFor="let item of list">
-    <h6>Nombre Producto: {{item.nom}}</h6>
-    <h6>Precio: {{item.precio}} €</h6>
+<div  class="lista_A_vender" *ngFor="let item of lista_op">
+    <h6>Nombre Producto: {{item.nombre}}</h6>
+    <h6>Id producto: {{item.id}}</h6>
     <input type="number" placeholder="0" class="cantidad">
-    <img class="type" src="../../assets/Productos/Frutas/piña.jpeg" alt="" srcset="">
+    <img class="type" [src]='item.url' alt="" srcset="">
     <img class="trash" src="../../assets/Flaticon_icons/delete.png" alt="" srcset="">
 </div>
 

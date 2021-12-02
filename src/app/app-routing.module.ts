@@ -8,6 +8,7 @@ import { LocationComponent } from './location/location.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { PayoutComponent } from './payout/payout.component';
 import { MiListaComponent } from './mi-lista/mi-lista.component';
+import { StageAreaComponent } from './stage-area/stage-area.component';
 
 
 //Array de rutas validado
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:"products",component:ProductosComponent},
   {path:"contact",component:ContactComponent},
   {path:"location",component:LocationComponent},
+  {path:"stage",component:StageAreaComponent},
   {path:"payout/:lista",component:PayoutComponent,
   children:[
     {
