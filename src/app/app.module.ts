@@ -23,6 +23,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { PayoutComponent } from './payout/payout.component';
 import { StageAreaComponent } from './stage-area/stage-area.component';
+import { LogInComponent } from './log-in/log-in.component';
 
 
 
@@ -45,6 +46,7 @@ import { StageAreaComponent } from './stage-area/stage-area.component';
     SearchPipe,
     PayoutComponent,
     StageAreaComponent,
+    LogInComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,7 @@ import { StageAreaComponent } from './stage-area/stage-area.component';
     MatSlideToggleModule,
     HttpClientModule,
     FormsModule,
-    MatChipsModule
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
