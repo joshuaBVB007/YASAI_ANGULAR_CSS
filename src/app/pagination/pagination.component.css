@@ -3,12 +3,12 @@ div{
     bottom: 0;
     height: 60px;
     width: 100%;
-    background-color: rgb(78, 228, 183);
+    background-color: rgb(27, 2, 77);
 }
 
 /* ambas etiquetas que aparecen: developed by y all rights reserved */
 h6{
-    float: right;color:black;font-weight: bold;
+    float: right;color:rgb(240, 9, 136);font-weight: bold;
     margin-top: 20px;margin-right: 10px;
 }
 .derecho{

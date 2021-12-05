@@ -8,7 +8,7 @@
     left: 10px;width: 30px;height: 30px;
 }
 .search input[placeholder]{
-    color: black; padding-left: 50px;
+    color: green; padding-left: 50px;
 }
 input{
     display: block;border-radius: 8px;border-color: black;
@@ -39,10 +39,6 @@ input{
     width: 60px;height: 60px;
 }
 
-
-
-
-
 /* contenedor opciones */
 .opciones_menu{
     position: fixed;
@@ -54,7 +50,6 @@ input{
     height: 50px;
     padding: 10px;
 }
-
 
 /*Contenedor de cards*/
 .conCards{

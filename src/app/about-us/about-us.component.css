@@ -1,5 +1,5 @@
 .principal{
-    position: relative;background-color:rgb(78, 228, 183);
+    position: relative;background-color:rgb(27, 2, 77);
     width: 100%;padding: 20px;
 }
 .content{
@@ -13,9 +13,11 @@
 }
 .etiquetas_contenido{
     position: relative;width: 100%;margin: auto;
+    background-color:rgb(27, 2, 77);
 }
 .card{
     float: left;border:none;width: 30%;margin: 6px;
+    /* background-color:rgb(27, 2, 77); */
 }
 .card-img-top{
     display: block;margin: auto;border-radius: 50%;width: 20%;margin-bottom: 20px;
