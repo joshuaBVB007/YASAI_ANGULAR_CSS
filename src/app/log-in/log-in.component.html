@@ -1,8 +1,9 @@
 <div class="datos">
     <div class="inputs">
-        <input type="text" placeholder="E-mail">
-        <input type="password" placeholder="Password">
-        <button>Sign In</button>
+        <input type="text" [(ngModel)]="email" required placeholder="E-mail">
+        <input type="password" [(ngModel)]="password" required placeholder="Password">
+        <button (click)="SignIn()" >Sign In</button>
+        <button (click)="SignUp()" >Sign Up</button>
     </div>
 </div>
 

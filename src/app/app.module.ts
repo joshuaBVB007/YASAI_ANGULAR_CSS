@@ -25,6 +25,8 @@ import { PayoutComponent } from './payout/payout.component';
 import { StageAreaComponent } from './stage-area/stage-area.component';
 import { LogInComponent } from './log-in/log-in.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -58,6 +60,8 @@ import { LogInComponent } from './log-in/log-in.component';
     HttpClientModule,
     FormsModule,
     MatChipsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 //Lo hemos importado de el modulo de npm: npm install firebase  
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { getDatabase, ref, set } from "firebase/database";
+
+
+
 
 
 /* Pasos de instalacion del Auth
@@ -9,6 +12,7 @@ https://firebase.google.com/docs/web/setup?authuser=0
 */
 
 import { initializeApp } from 'firebase/app';
+import { RestService } from '../rest.service';
 
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
@@ -33,25 +37,48 @@ const app = initializeApp(firebaseConfig);
 })
 export class LogInComponent implements OnInit {
 
-  constructor() { }
+  firebaseAuthInstance:any;
+  email="";
+  password="";
+
+  constructor(private service:RestService) { }
 
   ngOnInit(): void {
-    const firebaseApp=getAuth();
-    createUserWithEmailAndPassword(firebaseApp, "mongoDdddddB@gmail.com","123456")
+    this.firebaseAuthInstance=getAuth();
+  }
+
+  SignUp(){
+    createUserWithEmailAndPassword(this.firebaseAuthInstance, this.email,this.password)
         .then((userCredential) => {
-          // Signed in
-          this.Prueba();
+
+          this.service.Correctly();
           const user = userCredential.user;
         })
         .catch((error) => {
+          this.service.InCorrectly();
           const errorCode = error.code;
           const errorMessage = error.message;
           // ..
     });
   }
+  
 
+  SignIn(){
+    signInWithEmailAndPassword(this.firebaseAuthInstance, this.email,this.password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      console.log("todo en orden")
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log("Datos incorrectos")
+    });
+  }
 
-  Prueba(){
+  // este es un metodo que hace un insert a realtime  database
+  PruebaDeInsert(){
     console.log("Ha entrado en Prueba")
     const db = getDatabase(app);
 
@@ -60,8 +87,6 @@ export class LogInComponent implements OnInit {
     });
   }
 
-
-
- 
-
 }
+
+

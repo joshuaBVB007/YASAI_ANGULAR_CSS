@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
+import { LogInComponent } from './log-in/log-in.component';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +17,7 @@ export class RestService {
 
   current_config="manzana";
 
-  constructor(private httpPointer:HttpClient) {}
+  constructor(private httpPointer:HttpClient,private toast:ToastrService) {}
 
   add_to_mi_lista(producto:string){
       //ingresamos un nuevo producto añadido por el cliente
@@ -39,6 +42,17 @@ export class RestService {
     return this.httpPointer.get("https://dog.ceo/api/breeds/list/all");
   }
 
+  Correctly(){
+    this.toast.success("Sign up correctly","OK",{
+      timeOut:3000,
+    });
+  }
+
+  InCorrectly(){
+    this.toast.error("User already in used ","Data unfilled or",{
+      timeOut:6000,
+    });
+  }
 
   
 }
