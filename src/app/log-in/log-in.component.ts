@@ -4,9 +4,6 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 import { getDatabase, ref, set } from "firebase/database";
 
 
-
-
-
 /* Pasos de instalacion del Auth
 https://firebase.google.com/docs/web/setup?authuser=0
 */
@@ -27,7 +24,9 @@ const firebaseConfig = {
   measurementId: "G-EWXR6F76NK"
 };
 
-const app = initializeApp(firebaseConfig);
+
+
+export const app = initializeApp(firebaseConfig);
 
 
 @Component({
@@ -74,16 +73,6 @@ export class LogInComponent implements OnInit {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log("Datos incorrectos")
-    });
-  }
-
-  // este es un metodo que hace un insert a realtime  database
-  PruebaDeInsert(){
-    console.log("Ha entrado en Prueba")
-    const db = getDatabase(app);
-
-    set(ref(db, 'users/' + 2), {
-      username: "Jonathan",
     });
   }
 

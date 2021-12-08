@@ -27,7 +27,7 @@
 <!-- CARDS DE LOS PRODUCTOS -->
 <div  [ngSwitch]="tipo_producto" class="conCards">
         <ul *ngSwitchCase="'frutas'" >
-                <div *ngFor="let item of frutas | search:dato" class="card">
+                <div *ngFor="let item of frutas_ | search:dato" class="card">
                         <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <div>
@@ -44,7 +44,7 @@
                 </div>
         </ul>
         <ul *ngSwitchCase="'postres'" >
-                <div *ngFor="let item of postres | search:dato" class="card">
+                <div *ngFor="let item of postres_ | search:dato" class="card">
                         <img [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <div>
@@ -61,7 +61,7 @@
                 </div>
         </ul>
         <ul *ngSwitchCase="'smoothies'" >
-                <div *ngFor="let item of smoothies | search:dato" class="card">
+                <div *ngFor="let item of smoothies_ | search:dato" class="card">
                         <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <div>

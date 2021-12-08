@@ -27,6 +27,8 @@ import { LogInComponent } from './log-in/log-in.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { HistorialComponent } from './historial/historial.component';
+import { OffersComponent } from './offers/offers.component';
 
 
 
@@ -49,6 +51,8 @@ import { ToastrModule } from 'ngx-toastr';
     PayoutComponent,
     StageAreaComponent,
     LogInComponent,
+    HistorialComponent,
+    OffersComponent,
   ],
   imports: [
     BrowserModule,
