@@ -17,6 +17,8 @@ export class PayoutComponent implements OnInit {
 
   userActive:any=getAuth().currentUser;
   lista_op:any[]=[];
+  Total_A_Pagar:number=0;
+  conversion:any;
 
   constructor(private service:RestService) { }
 
@@ -26,14 +28,19 @@ export class PayoutComponent implements OnInit {
     console.log(this.lista_op);
   }
 
+  DeleteProduct(indice:number){
+    console.log(indice);
+    this.service.delete_A_product_from_list(indice);
+  }
+
   InsertPayment(){
     console.log("Ha entrado en Prueba")
     const db = getDatabase(app);
     console.log(this.userActive)
     // dolores es el json principal y 2 en este caso es su hijo 
-    set(ref(db, 'compras/'+"EGHBWld0frVXeUFeg85pEHjBMCh2"+"/"+"compra_Del_dia:"+new Date().toLocaleTimeString()+":"+new Date().getUTCFullYear()), {
-      productos: "mongolitolito",
+    set(ref(db, 'Compras_de_los_usuarios/'+"EGHBWld0frVXeUFeg85pEHjBMCh2"+"/"+"compra_Del_dia:"+new Date().toLocaleTimeString()+":"+new Date().getUTCFullYear()), {
       lista:this.lista_op,
+      fecha:new Date().toLocaleTimeString()+":"+new Date().getUTCFullYear(),
     });
   }
 

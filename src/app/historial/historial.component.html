@@ -1,6 +1,14 @@
-<p>historial works!</p>
+<h1>Shopping history!</h1>
 
-{{historial_de_compras_usuario.length}}
+<h4 class="total">
+    Purchase's total: {{historial_de_compras_usuario.length}}
+</h4>
+
+
 <ul *ngFor="let item of historial_de_compras_usuario">
-        <li>{{item}}</li>
+        <div class="purchase">
+                <h4>Purchase's Date:<span>{{item.fecha}}</span></h4>
+                <h6>You bought that day:<span>{{item.lista}}</span></h6> 
+        </div>    
 </ul>
+

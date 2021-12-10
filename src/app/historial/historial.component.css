@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+.total{
+    position: fixed;
+    bottom: 40px;
+    font-weight: bold;
+}
+
+.purchase{
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    background-color: rgb(27, 2, 77);
+    text-align: center;
+    color: rgb(240, 9, 136);
+    padding-top: 6px;
+    padding-bottom: 2px;
+}

@@ -1,18 +1,20 @@
 <h1> <i class="bi bi-bag"> </i> My ShoppingList</h1>
 
 
-<div  class="lista_A_vender" *ngFor="let item of lista_op">
-    <h6>Nombre Producto: {{item.nombre}}</h6>
-    <h6>Id producto: {{item.id}}</h6>
+<div  class="lista_A_vender"  *ngFor="let item of lista_op;let i=index">
+    <h6>Product's name: {{item.nombre}}</h6>
+    <h6>Price: {{item.precio}}€</h6>
+    <h6>Indice: {{i}}</h6>
     <input type="number" placeholder="0" class="cantidad">
     <img class="type" [src]='item.url' alt="" srcset="">
-    <img class="trash" src="../../assets/Flaticon_icons/delete.png" alt="" srcset="">
+    <img class="trash" (click)="DeleteProduct(i)" 
+    src="../../assets/Flaticon_icons/delete.png" alt="" srcset="">
 </div>
 
 <img src="../../assets/Payout/animation_500_kwexoljf.gif" alt="" srcset="">
 
 <div class="total">
-    <h2>Total: 50€ </h2>
+    <h2>Total: {{Total_A_Pagar}} </h2>
     <button (click)="InsertPayment()">Buy now</button>
 </div>
 

@@ -3,6 +3,7 @@ import { Observable, Subject } from 'rxjs';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import { LogInComponent } from './log-in/log-in.component';
+import { FirebaseObject } from './productos/productos.component';
 
 
 @Injectable({
@@ -10,21 +11,27 @@ import { LogInComponent } from './log-in/log-in.component';
 })
 
 export class RestService {
-  mi_lista_subject=new Subject<string[]>();
-  productos_en_el_carrito:string[]=[];
+  mi_lista_subject=new Subject<FirebaseObject[]>();
+  //esta propiedad esta siendo trabajada en payout
+  productos_en_el_carrito:any[]=[];
 
   que_es="";
-
   current_config="manzana";
 
   constructor(private httpPointer:HttpClient,private toast:ToastrService) {}
 
-  add_to_mi_lista(producto:string){
+  add_to_mi_lista(producto:FirebaseObject){
       //ingresamos un nuevo producto añadido por el cliente
       this.productos_en_el_carrito.push(producto);
       this.mi_lista_subject.next(this.productos_en_el_carrito);
   }
-  Return_lista_subject():Observable<string[]>{
+
+  delete_A_product_from_list(indice:number){
+    this.productos_en_el_carrito.splice(indice,1);
+    this.mi_lista_subject.next(this.productos_en_el_carrito);
+  }
+
+  Return_lista_subject():Observable<FirebaseObject[]>{
     return this.mi_lista_subject;
   }
   ReturnCurrentConfig(){
