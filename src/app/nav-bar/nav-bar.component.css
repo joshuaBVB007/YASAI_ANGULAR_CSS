@@ -1,7 +1,7 @@
 /*Contenedor principal*/
 .header{
     position: relative;
-    background-color: rgb(27, 2, 77);
+    background-color: rgb(76, 237, 55);
 }
 
 /*Las 2 imagenes del costado derecho*/
@@ -9,7 +9,7 @@
     width: 50px;margin-right: 20px;cursor: pointer;
 }
 .titulo{
-    font-weight: bold;font-size: 2.0em;color: rgb(240, 9, 136);
+    font-weight: bold;font-size: 2.0em;color: black;
 }
 
 /*Barra navegacion*/
@@ -41,7 +41,7 @@ nav ul li:hover{
 /*Etiquetas ancla de la barra de navegacion*/
 nav ul li a{
     text-decoration: none;
-    color: rgb(240, 9, 136);
+    color: black;
     font-weight: bold;
     font-size: 1.0em;
 }

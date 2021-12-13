@@ -1,5 +1,5 @@
 .datos{
-    background-image: url('../../assets/cupcake.jpg');
+    background-image: url('../../assets/macedonia.jpg');
     background-repeat: round;
     width: 100%;
     height: 100vh;
@@ -16,23 +16,24 @@
 
 
 ::-webkit-input-placeholder{
-    color: rgb(240, 9, 136);
+    color: black;
 }
 
 input{
     display: block;width: 100%;
     padding: 10px;margin: 4px;
-    color: rgb(240, 9, 136);
+    color: black;
     border-radius: 20px;
     border: none;
-    background-color: rgb(27, 2, 77);
+    background-color: white;
     font-weight: bold;
 }
 button{
     display: block;
-    margin: auto;
-    background-color: rgb(252, 236, 6);
+    margin: 5px auto;
+    background-color: rgb(76, 237, 55);
     border-radius: 20px;
+    color: black;
     font-weight: bold;
     border:none;
     padding: 8px 18px;

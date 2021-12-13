@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: animated;
-    src: url("assets/Fuentes/Fuzzy_Bubbles/FuzzyBubbles-Regular.ttf");
+    src: url("assets/Fuentes/Fuzzy_Bubbles/FuzzyBubbles-Bold.ttf");
 }
 
 body{
@@ -11,8 +11,6 @@ body{
     margin: 0;
     padding: 0;
     font-family: animated;
-    background-color: none;
-    color: black;
 }
 
 html, body { height: 100%; }
