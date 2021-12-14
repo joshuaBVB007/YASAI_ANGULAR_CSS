@@ -29,7 +29,7 @@ class ProductoAPagar{
 export class PayoutComponent implements OnInit {
 
   //usuario de firebase en activo
-  userActive:any=getAuth().currentUser;
+  userActive:any;
 
   //la lista que recibimos de la observable
   lista_op:any[]=[];
@@ -44,6 +44,7 @@ export class PayoutComponent implements OnInit {
 
   ngOnInit(): void {
     
+    this.userActive=this.service.getUserOnSession();
     this.service.que_es="payout";
     this.lista_op=this.service.productos_en_el_carrito;
     this.FillObject();
@@ -55,7 +56,13 @@ export class PayoutComponent implements OnInit {
     this.lista_A_pagar[indice].cantidad=cantidad;
   }
 
+  Buynow(){
+    this.Total_A_Pagar=0;
+    console.log("Comprado");
+  }
+
   Confirm(){
+    console.log("click en confirmado");
     for (let index = 0; index < this.lista_A_pagar.length; index++) {
       const element = this.lista_A_pagar[index];
       var process_price=parseFloat(element.precio)
@@ -63,6 +70,8 @@ export class PayoutComponent implements OnInit {
       var process_total=process_price*process_quantity;
       this.Total_A_Pagar+=process_total;
     }
+    this.service.productos_en_el_carrito=[];
+    this.lista_A_pagar=[];
   }
 
   FillObject(){
@@ -77,6 +86,8 @@ export class PayoutComponent implements OnInit {
   DeleteProduct(indice:number){
     console.log(indice);
     this.service.delete_A_product_from_list(indice);
+    this.lista_A_pagar=[];
+    this.FillObject();
   }
 
   InsertPayment(){
@@ -84,10 +95,11 @@ export class PayoutComponent implements OnInit {
     const db = getDatabase(app);
     console.log(this.userActive)
     // dolores es el json principal y 2 en este caso es su hijo 
-    set(ref(db, 'Compras_de_los_usuarios/'+"EGHBWld0frVXeUFeg85pEHjBMCh2"+"/"+"compra_Del_dia:"+new Date().toLocaleTimeString()+":"+new Date().getUTCFullYear()), {
+    set(ref(db, 'Compras_de_los_usuarios/'+this.userActive.uid+"/"+"compra_Del_dia:"+new Date().toLocaleTimeString()+":"+new Date().getUTCFullYear()), {
       lista:this.lista_op,
       fecha:new Date().toLocaleTimeString()+":"+new Date().getUTCFullYear(),
     });
+    this.Total_A_Pagar=0;
   }
 
 }

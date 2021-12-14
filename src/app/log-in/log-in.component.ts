@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //Lo hemos importado de el modulo de npm: npm install firebase  
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { getDatabase, ref, set } from "firebase/database";
+import { Router } from '@angular/router';
 
 
 /* Pasos de instalacion del Auth
@@ -29,6 +30,7 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 
 
+
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
@@ -36,11 +38,13 @@ export const app = initializeApp(firebaseConfig);
 })
 export class LogInComponent implements OnInit {
 
+
+  userActive:any;
   firebaseAuthInstance:any;
   email="";
   password="";
 
-  constructor(private service:RestService) { }
+  constructor(private service:RestService,private router:Router) { }
 
   ngOnInit(): void {
     this.firebaseAuthInstance=getAuth();
@@ -68,6 +72,10 @@ export class LogInComponent implements OnInit {
       // Signed in
       const user = userCredential.user;
       console.log("todo en orden")
+      this.userActive=getAuth().currentUser;
+      console.log(this.userActive.uid);
+      this.service.userOnSession(this.userActive);
+      this.router.navigateByUrl("products")
     })
     .catch((error) => {
       const errorCode = error.code;

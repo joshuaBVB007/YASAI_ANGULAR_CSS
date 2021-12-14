@@ -4,6 +4,7 @@ import { SearchPipe } from '../search.pipe';
 import { getDatabase, ref, onValue} from "firebase/database";
 import { getAuth } from 'firebase/auth';
 import { app } from '../log-in/log-in.component';   
+import { Router } from '@angular/router';
 
 
 export class FirebaseObject{
@@ -38,7 +39,7 @@ export class ProductosComponent implements OnInit{
   //Propiedad utilizada en el filtro del buscador
   dato:string="";
 
-  constructor(private service:RestService){} 
+  constructor(private service:RestService,private route:Router){} 
 
   ngOnInit(): void {
 
@@ -117,6 +118,12 @@ export class ProductosComponent implements OnInit{
   cambio(dato:string){
     this.tipo_producto=dato;
   }
+
+  GoToLogin(){
+      console.log("si va")
+      this.route.navigateByUrl("/login")
+  }
+
   changeStyle(style:string){
     this.service.ChangeCurrentConfig(style);
     this.freno=1;

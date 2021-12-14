@@ -1,3 +1,5 @@
+<app-nav-bar></app-nav-bar>
+
 <h1> <i class="bi bi-bag"> </i> My ShoppingList</h1>
 
 <div  class="lista_A_vender"  *ngFor="let item of lista_A_pagar;let i=index">
@@ -10,12 +12,12 @@
     src="../../assets/Flaticon_icons/delete.png" alt="" srcset="">
 </div>
 
-<button id="jona" (click)="Confirm()">Confirmar productos</button>
+<button id="jona" (click)="Confirm()">Confirm products</button>
 <img src="../../assets/Payout/animation_500_kwexoljf.gif" alt="" srcset="">
 
 <div class="total">
-    <h2>Total: {{Total_A_Pagar}} </h2>
-    <button>Buy now</button>
+    <h2>Total: {{Total_A_Pagar}}€ </h2>
+    <button (click)="InsertPayment()">Buy Now</button>
 </div>
 
 

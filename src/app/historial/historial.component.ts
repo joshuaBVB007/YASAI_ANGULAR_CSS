@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { getDatabase, ref, onValue} from "firebase/database";
 import { getAuth } from 'firebase/auth';
 import { app } from '../log-in/log-in.component';   
+import { RestService } from '../rest.service';
 
 
 class CustomerPurchases{
@@ -21,16 +22,18 @@ class CustomerPurchases{
 
 export class HistorialComponent implements OnInit {
 
-  userActive:any=getAuth().currentUser;
+  userFirebaseOnSessionReceiver:any;
   listas_del_historial:any=[];
   historial_de_compras_usuario:any=[];
 
-  constructor() { }
+  constructor(private service:RestService) { }
   ngOnInit(): void {
     // accedmos a la bbdd en la nube de firebase
     const db = getDatabase(app);
     // accedemos al nodo de esa bbdd 
-    const nodo = ref(db, 'Compras_de_los_usuarios/' +"EGHBWld0frVXeUFeg85pEHjBMCh2");
+    this.userFirebaseOnSessionReceiver=this.service.getUserOnSession();
+    console.log(this.userFirebaseOnSessionReceiver);
+    const nodo = ref(db, 'Compras_de_los_usuarios/' +this.userFirebaseOnSessionReceiver.uid.toString());
      //this.userActive.uid
     onValue(nodo, (snapshot) => {
       // recuperamos los hijos de ese nodo

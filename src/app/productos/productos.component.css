@@ -24,7 +24,18 @@ input{
 
 /* FIN DE SEARCH */
 
-
+.signout{
+    position: fixed;
+    bottom: 14%;
+    right: 2%;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 0.8em;
+    background-color: black;
+    color: white;
+    border:none;
+    z-index: 1;
+}
 
 /* MIlista */
 .milista{

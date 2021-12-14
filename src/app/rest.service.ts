@@ -18,6 +18,16 @@ export class RestService {
   que_es="";
   current_config="manzana";
 
+  userFirebaseActive:any;
+
+  userOnSession(usuario:any){
+      this.userFirebaseActive=usuario;
+  }
+
+  getUserOnSession(){
+    return this.userFirebaseActive;
+  }
+
   constructor(private httpPointer:HttpClient,private toast:ToastrService) {}
 
   add_to_mi_lista(producto:FirebaseObject){
