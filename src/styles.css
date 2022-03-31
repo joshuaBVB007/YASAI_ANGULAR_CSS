@@ -6,6 +6,14 @@
     src: url("assets/Fuentes/Fuzzy_Bubbles/FuzzyBubbles-Bold.ttf");
 }
 
+/* Colours to all the project */
+:root{
+    --white-normal: rgb(255, 255, 255);
+    --softer-purple:rgb(242, 40, 174);
+    --blacky:rgb(10, 10, 10);
+}
+
+
 body{
     box-sizing: border-box;
     margin: 0;

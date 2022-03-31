@@ -1,18 +1,12 @@
 <app-nav-bar></app-nav-bar>
+<app-tool-bar></app-tool-bar>
 
-
-<!-- Buscador -->
+<!-- Search Bar -->
 <div class="search">
         <input id="input-search" [(ngModel)]='dato' type="text" placeholder="Articulo que buscas?">
         <img class="img-search" src="../../assets/Productos/search.png" alt="" srcset="">
 </div>
-
 <br>
-
-<!-- Para aplicar un boton de noche y dia -->
-<app-tool-bar></app-tool-bar>
-
-
 <div class="opciones_menu">
         <img (click)="changeStyle('cereza')" src="../../assets/Productos/Logos_cambio_color/fresa.png" alt="" srcset="">
         <img (click)="changeStyle('manzana')" src="../../assets/Productos/Logos_cambio_color/manzana.png" alt="" srcset="">
@@ -24,7 +18,7 @@
             <img src="../../assets/Flaticon_icons/cupcake.png" (click)="cambio('postres')" alt="smoothie">
             <img src="../../assets/Flaticon_icons/smoothie.png" (click)="cambio('smoothies')" alt="smoothie">
             <img src="../../assets/Flaticon_icons/frutas.png" (click)="cambio('frutas')" alt="smoothie">
-    </div>
+    </div> 
 <h1></h1>
 
 <button class="signout" (click)="GoToLogin()">Sign out</button>

@@ -2,7 +2,7 @@
     background-image: url('../../assets/macedonia.jpg');
     background-repeat: round;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     margin-top: -30px;
     position: relative;
 }
@@ -31,7 +31,7 @@ input{
 button{
     display: block;
     margin: 5px auto;
-    background-color: rgb(76, 237, 55);
+    background-color: var(--rojoPersonalizado);
     border-radius: 20px;
     color: black;
     font-weight: bold;
