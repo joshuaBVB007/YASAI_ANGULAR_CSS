@@ -29,10 +29,10 @@ input{
     bottom: 14%;
     right: 2%;
     border-radius: 20px;
-    padding: 20px;
-    font-size: 1em;
+    padding: 10px;
+    font-size: 0.8em;
     font-weight: bold;
-    background-color: var(--softer-purple);
+    background-color: black;
     color: var(--white-normal);
     border:none;
 }
