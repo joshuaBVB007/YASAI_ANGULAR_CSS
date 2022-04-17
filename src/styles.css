@@ -9,7 +9,7 @@
 /* Colours to all the project */
 :root{
     --white-normal: rgb(255, 255, 255);
-    --softer-purple:rgb(242, 40, 174);
+    --softer-purple:rgba(235, 14, 161, 0.863);
     --blacky:rgb(10, 10, 10);
 }
 

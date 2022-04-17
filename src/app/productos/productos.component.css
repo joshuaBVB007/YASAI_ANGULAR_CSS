@@ -70,8 +70,11 @@ input{
 }
 
 /*Contenedor de cards*/
-.conCards{
-    width: 60%;margin: auto;clear: left;
+.conCards ul {
+    width: 60%;margin: auto; display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    clear: left;justify-content: center;
 }
 ul{
     display: block;width: 100%;
@@ -240,11 +243,10 @@ h6{
 @media only screen and (max-width:540px){
     .conCards{
         /*contenedor de cards*/
-        width: 80%;
+        width: 100%;
     }
     .card{
         width: 40%;
-        margin: 2px;
         border-color: black;
     }
     h6{
