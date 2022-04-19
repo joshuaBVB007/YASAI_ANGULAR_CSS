@@ -9,8 +9,10 @@ img{ height:60px;width:60px; }
 ul{ 
     list-style-type: none;
 }
+
+
 li{
-    display: inline
+    display: inline;
 }
 a{
     text-decoration: none;
