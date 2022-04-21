@@ -71,7 +71,7 @@ input{
 
 /*Contenedor de cards*/
 .conCards ul {
-    width: 60%;margin: auto; display:flex;
+    width: 80%;margin: auto; display:flex;
     flex-wrap: wrap;
     flex-direction: row;
     clear: left;justify-content: center;
