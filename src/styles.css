@@ -10,7 +10,9 @@
 :root{
     --white-normal: rgb(255, 255, 255);
     --softer-purple:rgba(235, 14, 161, 0.863);
-    --blacky:rgb(10, 10, 10);
+    --blacky:rgb(8, 8, 8);
+    --greeny:rgb(253, 249, 4);
+    --strong-green:rgb(151, 6, 255);
 }
 
 

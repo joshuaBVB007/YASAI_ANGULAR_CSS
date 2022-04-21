@@ -36,7 +36,7 @@ const routes: Routes = [
     {path:"info",component:InfoProductComponent},
   ]
   },
-  {path:'', redirectTo: '/login',pathMatch:'full'},
+  {path:'', redirectTo: '/products',pathMatch:'full'},
   {path:"**",component:AboutUsComponent},
 ];
 
