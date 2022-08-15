@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "yasaibackend"
-  }
+  },
+  "targets": {
+    "yasaibackend": {
+      "hosting": {
+        "web": [
+          "yasaiangular007"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
