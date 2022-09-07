@@ -1,73 +1,23 @@
 <app-nav-bar></app-nav-bar>
 
-
 <div class="principal">
     <div class="content">
         <h1>Discover a unique experience</h1>
-        <h6>We bring professional chefs to your home to prepare
+        <p>We bring professional chefs to your home to prepare
             delicious,customized meals at a fraction of the cost
-        </h6>
+        </p>
     </div>
     <img class="img_principal" src="../../assets/About-us/manzana_banana.png" alt="" srcset="">
 </div>
 
-
-<!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-    <!-- Indicators/dots -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-    </div>
-    
-    <!-- The slideshow/carousel -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../../assets/About-us/nose_2.jpg" alt="Los Angeles" class="d-block" style="width:100%; height: 600px;">
-      </div>
-      <div class="carousel-item">
-        <img src="../../assets/About-us/nose_2.jpg" alt="Chicago" class="d-block" style="width:100%; height: 600px;">
-      </div>
-      <div class="carousel-item">
-        <img src="../../assets/About-us/nose_2.jpg" alt="New York" class="d-block" style="width:100%;height: 600px;">
-      </div>
-    </div>
-    
-    <!-- Left and right controls/icons -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-</div>  
-<!-- etiquetas con pequeñas descripciones -->
 <div class="etiquetas_contenido">
-    <div class="etiqueta">
-            <img src="../../assets/About-us/cereal.png" alt="Card image">
-            <h4>Rice power</h4>
+    <div class="etiqueta"  *ngFor="let item of tags">
+            <img [src]='item.img' alt="Card image">
+            <h4>{{ item.nombre }}</h4>
             <p>
-                Rice is a source of protein and contains various vitamins,
-                such as thiamin and niacin, and minerals, such as zinc and phosphorus.
-                Some nutrients, including vitamin E, magnesium, potassium, and manganese,etc</p>
-    </div>
-    <div class="etiqueta">
-            <img src="../../assets/About-us/combine-harvester.png" alt="Card image">
-            <h4>Harvest time</h4>
-            <p>
-                A major change in your diet, even if your family and friends are super-supportive, 
-                is an upheaval in your life. It begins a journey of finding new foods, new recipes, 
-                new food prepping techniques. </p>
-    </div>
-    <div class="etiqueta">
-            <img src="../../assets//About-us/vegetables.png" alt="Card image">
-            <h4>Vegetarian advice</h4>
-            <p>
-                It's important to vary what you eat. Some nutrients are found in smaller amounts in vegetarian sources,
-                or are less easily absorbed by the body than those in meat or fish.</p>
-    </div>
+                {{ item.desc }}
+            </p>
+    </div>    
 </div>
 
 
