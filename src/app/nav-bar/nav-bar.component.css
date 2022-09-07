@@ -3,14 +3,17 @@
     position: relative;
     background-color: var(--white-normal);
     display: flex;flex-direction: row;
+    background-color:yellow;
 }
-img{ height:60px;width:60px; }
-.titulo{ font-size:4em; }
+img{ 
+    height:60px;width:60px;
+}
+.titulo{ 
+    font-size:xx-large; 
+}
 ul{ 
     list-style-type: none;
 }
-
-
 li{
     display: inline;
 }
@@ -26,7 +29,6 @@ a{
         display: flex;flex-direction: column;
         align-items: center;
     } 
-    .titulo{ font-size:2em; }
     a{
         text-decoration: none;
         font-size: medium;

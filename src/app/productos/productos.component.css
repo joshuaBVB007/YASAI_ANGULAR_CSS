@@ -13,7 +13,7 @@ input{
     font-weight: bold;
 }
 h6{
-    text-align: center; font-weight: bold;font-size: x-large;
+    text-align: center; font-weight: bold;font-size:large;
 }
 /* Buscador */
 .search{
@@ -108,7 +108,6 @@ h6{
         flex-direction: column;
         width: 100%;
         margin: auto;
-        background-color:yellow;
     }
     .card{
         width: 60%;
