@@ -18,7 +18,7 @@ h6{
 /* Buscador */
 .search{
     position: relative;
-    width: 30%;margin: auto;
+    width: 40%;margin: auto;
 }
 .img-search{
     position: absolute;top: 6px;
@@ -42,7 +42,7 @@ h6{
 }
 /*Contenedor de cards*/
 .conCards ul {
-    width: 80%;margin: auto; display:flex;
+    width: 80%;margin:auto; display:flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -116,5 +116,8 @@ h6{
     }
     .card img{
         width: 60%;
+    }
+    .search{
+        width: 80%; 
     }
 }
