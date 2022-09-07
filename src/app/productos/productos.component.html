@@ -4,16 +4,14 @@
 <!-- Search Bar -->
 <div class="search">
         <input id="input-search" [(ngModel)]='dato' type="text" placeholder="Articulo que buscas?">
-        <img class="img-search" src="../../assets/Productos/search.png" alt="" srcset="">
+        <img class="img-search" src="../../assets/Productos/search.png" alt="buscador" srcset="">
 </div>
 <br>
-<div class="opciones_menu">
+<div class="opciones_de_estilo">
         <img (click)="changeStyle('cereza')" src="../../assets/Productos/Logos_cambio_color/fresa.png" alt="" srcset="">
         <img (click)="changeStyle('manzana')" src="../../assets/Productos/Logos_cambio_color/manzana.png" alt="" srcset="">
         <img (click)="changeStyle('uvas')" src="../../assets/Productos/Logos_cambio_color/uvas_.png" alt="" srcset="">
 </div>
-
-
 <div class="menu_productos">
             <img src="../../assets/flaticon_icons/cupcake.png" (click)="cambio('postres')" alt="smoothie">
             <img src="../../assets/flaticon_icons/smoothie.png" (click)="cambio('smoothies')" alt="smoothie">
@@ -27,7 +25,7 @@
                 <div *ngFor="let item of frutas_ | search:dato" class="card">
                         <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
-                        <div>
+                        <div class="btn_container">
                                 <button (click)="Add(item)"  [ngClass]="btn_disenio">
                                         <img src="../../assets/flaticon_icons/add-cart.png" alt="" srcset="">
                                 </button>
@@ -44,7 +42,7 @@
                 <div *ngFor="let item of postres_ | search:dato" class="card">
                         <img [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
-                        <div>
+                        <div class="btn_container">
                                 <button (click)="Add(item)"  [ngClass]="btn_disenio">
                                         <img src="../../assets/flaticon_icons/add-cart.png" alt="" srcset="">
                                 </button>
@@ -61,7 +59,7 @@
                 <div *ngFor="let item of smoothies_ | search:dato" class="card">
                         <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
-                        <div>
+                        <div class="btn_container">
                                 <button (click)="Add(item)"  [ngClass]="btn_disenio">
                                         <img src="../../assets/flaticon_icons/add-cart.png" alt="" srcset="">
                                 </button>
@@ -75,9 +73,6 @@
                 </div>
         </ul>
 </div>
-
-
-<h1 class="options">Salto de linea forzado</h1>
 <app-pagination></app-pagination>
 
 

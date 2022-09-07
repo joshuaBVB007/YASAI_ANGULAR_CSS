@@ -1,17 +1,8 @@
-/* DIV QUE CONTIENE RECURSOS DEL SEARCH  */
-.search{
+/* genericos */
+img{
+    display: block;
     width: 50%;margin: auto;
-    position: relative;
-}
-.search img{
-    position: absolute;top: 6px;
-    left: 10px;width: 30px;height: 30px;
-}
-.search input[placeholder]{
-     padding-left: 50px;
-}
-::-webkit-input-placeholder{
-    color:black;
+    border-radius: 50%;
 }
 input{
     display: block;
@@ -21,84 +12,53 @@ input{
     padding: 6px; 
     font-weight: bold;
 }
-
-/* FIN DE SEARCH */
-
-.signout{
-    position: fixed;
-    bottom: 14%;
-    right: 2%;
-    border-radius: 20px;
-    padding: 10px;
-    font-size: 0.8em;
-    font-weight: bold;
-    background-color: black;
-    color: var(--white-normal);
-    border:none;
+h6{
+    text-align: center; font-weight: bold;font-size: x-large;
 }
-
-/* MIlista */
-.milista{
-    position: fixed;top: 300px;left: 0;
-}
-.milista .interno{
+/* Buscador */
+.search{
     position: relative;
+    width: 30%;margin: auto;
 }
-.milista .interno span{
-    position: absolute;left: 50px;
-    top: 0;font-weight: bold;
-    visibility: hidden;
+.img-search{
+    position: absolute;top: 6px;
+    left: 10px;width: 30px;height: 30px;
 }
-.milista .interno:hover span{
-    position: absolute;left: 50px;top: 0;
-    font-weight: bold;visibility: visible;
+.search input[placeholder]{
+     text-align: center;
 }
-.milista .interno img{
-    width: 60px;height: 60px;
+::-webkit-input-placeholder{
+    color:black;
 }
-
-/* contenedor opciones */
-.opciones_menu{
+/* contenedor de frutas que cambian el color de botnoes */
+.opciones_de_estilo{
     position: fixed;
     top: 60%;
 }
-
-.opciones_menu img{
+.opciones_de_estilo img{
     width: 50px;
     height: 50px;
     padding: 10px;
 }
-
 /*Contenedor de cards*/
 .conCards ul {
     width: 80%;margin: auto; display:flex;
     flex-wrap: wrap;
     flex-direction: row;
-    clear: left;justify-content: center;
+    justify-content: center;
 }
-ul{
-    display: block;width: 100%;
-    text-decoration: none;
+.btn_container{
+    display:flex;
+    flex-direction: row;
 }
 /*Card donde se muestran la imagen,h6 y el boton btn_interno*/
 .card{
-    position: relative;float: left;
-    width: 30%;border:none;
-    border-width: 4px;margin: 6px;
+    width: 30%;border:none;margin: 1%;
 }
-
 .card button img{
     padding: 4px;width: 40px;height: 40px;
 }
-img{
-    display: block;
-    width: 50%;height: 100px;margin: auto;
-    object-fit: cover;border-radius: 50%;
-}
-h6{
-    text-align: center; font-weight: bold;font-size: 1.0em;
-}
-/*Es el boton interno de cada card*/
+/*Es el que aplica el color a los distintos botones*/
 .btn_interno{
     background-color:rgb(226, 73, 99);
     width: 100%;
@@ -130,142 +90,31 @@ h6{
     border-radius: 20px;
 }
 
-/* esto es el salto de linea */
-.options{
-    clear: left;
-    visibility: hidden;
-}
-
+/* Menu productos es el contiene smoothies,frutas,y un cake */
 .menu_productos{
     position: fixed;
     top: 40%;
     right: 2%;
     border-radius: 10px;
 }
-
 .menu_productos img{
     width: 40px;
     height: 40px;
 }
-
-.menu{
-    position: fixed;
-    top: 140px;
-    right: 0;
-    width: 10%;
-    background-color: rgb(226, 73, 99);
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.menu-uva{
-    position: fixed;
-    top: 140px;
-    right: 0;
-    width: 10%;
-    background-color: rgb(184, 29, 223);
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.menu-manzana{
-    position: fixed;
-    top: 140px;
-    right: 0;
-    width: 10%;
-    background-color:greenyellow;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.menu div{
-    width: 100%;
-    cursor: pointer;
-}
-.menu-uva div{
-    width: 100%;
-    cursor: pointer;
-}
-.menu-manzana div{
-    width: 100%;
-    cursor: pointer;
-}
-
-
-.menu div h6{
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-}
-.menu-uva div h6{
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-}
-.menu-manzana div h6{
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.menu div img{
-    display: block;
-    margin: auto;
-    height: 30px;
-    width: 30px;
-}
-.menu-uva div img{
-    display: block;
-    margin: auto;
-    height: 30px;
-    width: 30px;
-}
-.menu-manzana div img{
-    display: block;
-    margin: auto;
-    height: 30px;
-    width: 30px;
-}
-
-.menu div h6:hover{
-    text-decoration-line: underline;
-    text-decoration-style: solid ;
-    text-decoration-color: black;
-    text-decoration-thickness: 6px;
-}
-
-
-
 /*Diseño para dispositivos moviles*/
 @media only screen and (max-width:540px){
-    .conCards{
+    .conCards ul{
         /*contenedor de cards*/
+        flex-direction: column;
         width: 100%;
+        margin: auto;
+        background-color:yellow;
     }
     .card{
-        width: 40%;
-        border-color: black;
+        width: 60%;
+        margin: auto;
     }
-    h6{
-        font-size: 1.0em;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width:280px){
-    .conCards{
-        /*contenedor de cards*/
-        width: 100%;
-    }
-    .card{
-        width: 50%;
-        border-color: black;
-    }
-    h6{
-        font-size: 1.0em;
-        text-align: center;
+    .card img{
+        width: 60%;
     }
 }
