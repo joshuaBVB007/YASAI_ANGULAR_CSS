@@ -1,23 +1,18 @@
 <app-nav-bar></app-nav-bar>
 
-<h1> <i class="bi bi-bag"> </i> My ShoppingList</h1>
-
-<div  class="lista_A_vender"  *ngFor="let item of lista_A_pagar;let i=index">
-    <h6>Product's name: {{item.nombre}}</h6>
-    <h6>Price: {{item.precio}}€</h6>
-    <h6>Indice: {{i}}</h6>
-    <input  class="cantidad" #valor  (change)="SetQuantityOfProducts(i,item.nombre,valor.value)" type="number" value="0">
-    <img class="type" [src]='item.url' alt="" srcset="">
-    <img class="trash" (click)="DeleteProduct(i)" 
-    src="../../assets/flaticon_icons/delete.png" alt="" srcset="">
+<h1>My ShoppingList</h1>
+<h6>Introduce la cantidad en el cuadro del producto</h6>
+<button  (click)="confirm()">Confirmar compra</button>
+<div class="container">
+    <div  class="card" *ngFor="let item of items_nearto_buy;let i=index">
+        <img [src]="item.url" alt="item" srcset="">
+        <h6>Product's name: {{item.nombre}}</h6>
+        <h6>Price: {{item.precio}}€</h6>
+        <input #jona  class="valor" type="number" min="0" [value]="Quantity">
+        <button (click)="add(item.nombre,item.precio,jona.value)">añadir</button>
+    </div>
 </div>
 
-<button id="jona" (click)="Confirm()">Confirm products</button>
-<img src="../../assets/Payout/animation_500_kwexoljf.gif" alt="" srcset="">
-
-<div class="total">
-    <h2>Total: {{Total_A_Pagar}}€ </h2>
-    <button (click)="InsertPayment()">Buy Now</button>
-</div>
+<h1 class="total">Total a pagar: {{total}}€</h1>
 
 

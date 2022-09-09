@@ -11,7 +11,6 @@ import { FormsModule } from '@angular/forms';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { MiListaComponent } from './mi-lista/mi-lista.component';
 import { CounterComponent } from './counter/counter.component';
 import { SearchPipe } from './search.pipe';
 import { PayoutComponent } from './payout/payout.component';
@@ -33,7 +32,6 @@ import { HistorialComponent } from './historial/historial.component';
     NavBarComponent,
     ToolBarComponent,
     ProductDetailComponent,
-    MiListaComponent,
     CounterComponent,
     SearchPipe,
     PayoutComponent,

@@ -22,7 +22,7 @@ h6{
 }
 .img-search{
     position: absolute;top: 6px;
-    left: 10px;width: 30px;height: 30px;
+    left: 10px;width: 30px;height: 24px;
 }
 .search input[placeholder]{
      text-align: center;

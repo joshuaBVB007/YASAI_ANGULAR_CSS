@@ -3,7 +3,8 @@
     position: relative;
     background-color: var(--white-normal);
     display: flex;flex-direction: row;
-    background-color:yellow;
+    justify-content: space-between;
+    align-items:center;
 }
 img{ 
     height:60px;width:60px;
@@ -19,7 +20,7 @@ li{
 }
 a{
     text-decoration: none;
-    font-size: x-large;
+    font-size: large;
     color: var(--softer-purple);
 }
 @media screen and (max-width: 760px) {
