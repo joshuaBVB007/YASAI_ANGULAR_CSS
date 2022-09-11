@@ -5,7 +5,6 @@
     width: 100%;
     margin:auto;
 }
-
 .principal img{
     overflow: hidden;
 }
@@ -19,7 +18,7 @@ h1{
 }
 .content p{
     color:var(--strong-green);
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
 /* Cards del fondo */
@@ -27,6 +26,13 @@ h1{
     display:flex;
     flex-direction: row;
     justify-content: center;
+}
+.etiqueta p{
+    display:block;
+    margin: auto;
+    font-size: medium;
+    width:80%;
+    text-align: center;
 }
 .etiqueta img{
     display:block;
@@ -36,18 +42,17 @@ h1{
 }
 .etiqueta h4{
     text-align: center;
+    font-size:x-large;
 }
-
 @media screen and (max-width: 530px){
     .etiquetas_contenido{
         flex-direction: column;       
     }
     h1{
         color:var(--blacky);
-        font-size: 8vw;
+        font-size: 10vw;
     }
     .content p{
-        color:blue;
-        font-size: 4vw;
+        font-size: 5vw;
     }
 }

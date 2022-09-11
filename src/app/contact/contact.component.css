@@ -1,15 +1,12 @@
 div{
     width: 60%;display: block;margin: auto;
 }
-
 h1{
     text-align: center;
 }
-
-button,textarea,input{
-    background-image: linear-gradient(to right, var(--softer-purple),rgb(0, 247, 255));
+input{
+    background-color: var(--softer-purple)
 }
-
 input{
     display: block;margin: 10px auto;
     width: 80%;padding: 10px;
@@ -29,6 +26,7 @@ textarea{
     display: block;margin: 10px auto;
     width: 50%;
     color: black;
+    background-color:var(--softer-purple);
     padding: 10px;text-align: center;
     border:none;
     border-radius: 20px;
@@ -36,6 +34,7 @@ textarea{
 }
 button{
     display: block;margin: auto;
+    background-color:yellow;
     color: black;border-radius: 20px;padding: 10px;width: 100px;
     font-size: 1.0em;font-weight: bold;border: none;
 }

@@ -19,6 +19,7 @@ h6{
 .search{
     position: relative;
     width: 40%;margin: auto;
+    font-size: x-large;
 }
 .img-search{
     position: absolute;top: 6px;
