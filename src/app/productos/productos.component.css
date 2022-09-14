@@ -12,6 +12,9 @@ input{
     padding: 6px; 
     font-weight: bold;
 }
+button{
+    cursor: pointer;
+}
 h6{
     text-align: center; font-weight: bold;font-size:large;
 }

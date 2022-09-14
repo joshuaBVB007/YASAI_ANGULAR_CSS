@@ -1,4 +1,4 @@
-import {  Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about-us',
@@ -6,7 +6,6 @@ import {  Component, OnInit } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent implements OnInit {
-
   tags=[
     {
       nombre:"Rice power",
@@ -30,7 +29,8 @@ export class AboutUsComponent implements OnInit {
       Some nutrients, including vitamin E, magnesium, potassium, and manganese,etc`
     }
   ]
-
   constructor() { }
   ngOnInit(): void {}
 }
+
+

@@ -27,13 +27,13 @@
                         <h6>{{item.nombre}}</h6>
                         <div class="btn_container">
                                 <button (click)="Add(item)"  [ngClass]="btn_disenio">
-                                        <img src="../../assets/flaticon_icons/add-cart.png" alt="" srcset="">
+                                        <img src="../../assets/flaticon_icons/add-cart.png" alt="añadir" srcset="">
                                 </button>
-                                <button  [ngClass]="btn_disenio">
+                                <!-- <button  [ngClass]="btn_disenio">
                                         <img src="../../assets/Productos/marcador-de-favoritos.png" alt="" srcset="">
-                                </button>
+                                </button> -->
                                 <button [routerLink]="['/details',item.nombre,{url:item.url,desc:item.descripcion}]"   [ngClass]="btn_disenio">
-                                        <img src="../../assets/Productos/info.png" alt="" srcset="">
+                                        <img src="../../assets/Productos/info.png" alt="info" srcset="">
                                 </button>
                         </div>
                 </div>
@@ -44,13 +44,13 @@
                         <h6>{{item.nombre}}</h6>
                         <div class="btn_container">
                                 <button (click)="Add(item)"  [ngClass]="btn_disenio">
-                                        <img src="../../assets/flaticon_icons/add-cart.png" alt="" srcset="">
+                                        <img src="../../assets/flaticon_icons/add-cart.png" alt="añadir" srcset="">
                                 </button>
-                                <button  [ngClass]="btn_disenio">
+                                <!-- <button  [ngClass]="btn_disenio">
                                         <img src="../../assets/Productos/marcador-de-favoritos.png" alt="" srcset="">
-                                </button>
+                                </button> -->
                                 <button [routerLink]="['/details',item.nombre,{url:item.url,desc:item.descripcion}]"   [ngClass]="btn_disenio">
-                                        <img src="../../assets/Productos/info.png" alt="" srcset="">
+                                        <img src="../../assets/Productos/info.png" alt="info" srcset="">
                                 </button>
                         </div>
                 </div>
@@ -60,14 +60,14 @@
                         <img  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <div class="btn_container">
-                                <button (click)="Add(item)"  [ngClass]="btn_disenio">
-                                        <img src="../../assets/flaticon_icons/add-cart.png" alt="" srcset="">
+                                <button  (click)="Add(item)"  [ngClass]="btn_disenio">
+                                        <img src="../../assets/flaticon_icons/add-cart.png" alt="añadir" srcset="">
                                 </button>
-                                <button   [ngClass]="btn_disenio">
+                                <!-- <button   [ngClass]="btn_disenio">
                                         <img src="../../assets/Productos/marcador-de-favoritos.png" alt="" srcset="">
-                                </button>
+                                </button> -->
                                 <button [routerLink]="['/details',item.nombre,{url:item.url,desc:item.descripcion}]"   [ngClass]="btn_disenio">
-                                        <img src="../../assets/Productos/info.png" alt="" srcset="">
+                                        <img src="../../assets/Productos/info.png" alt="info" srcset="">
                                 </button>
                         </div>
                 </div>

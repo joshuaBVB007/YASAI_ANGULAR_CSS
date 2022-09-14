@@ -20,8 +20,6 @@ import { ToastrModule } from 'ngx-toastr';
 import { HistorialComponent } from './historial/historial.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
