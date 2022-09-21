@@ -10,13 +10,19 @@ p{
 h1{
     text-align: center;
 }
-img{
+.googleuser{
+    position: fixed;
+    top: 1px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+}
+.card_img{
     display: block;
     margin: auto;
     border-radius: 20px;
     margin-bottom: 20px;
 }
-
 button{
     border-radius: 20px;
     border: none;
@@ -26,33 +32,27 @@ button{
     margin-bottom: 10px;
     cursor: pointer;
 }
-
 .vitamina{
     background-color: greenyellow;
 }
-
 .info{
     background-color: pink;
 }
-
 .pais{
     background-color: grey;
 }
-
 .vitaminas{
     background-color: greenyellow;
     padding: 10px;
     border-radius: 20px;
     margin-bottom: 4px;
 }
-
 .infos{
     background-color: pink;
     padding: 10px;
     border-radius: 20px;
     margin-bottom: 4px;
 }
-
 .paiss{
     background-color:grey;
     padding: 10px;

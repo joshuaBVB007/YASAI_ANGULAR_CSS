@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
-import { SearchPipe } from '../search.pipe';
 import { getDatabase, ref, onValue} from "firebase/database";
-import { getAuth } from 'firebase/auth';
 import { app } from '../log-in/log-in.component';   
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 
 
 export class FirebaseObject{
@@ -17,6 +15,7 @@ export class FirebaseObject{
       this.precio=precio;
   }
 }
+export let FirebaseGoogleAuthReceived:any;
 
 @Component({
   selector: 'app-productos',
@@ -39,9 +38,14 @@ export class ProductosComponent implements OnInit{
   //Propiedad utilizada en el filtro del buscador
   dato:string="";
 
-  constructor(private service:RestService,private route:Router){} 
+  constructor(private service:RestService,private route:Router,private routeAuth:ActivatedRoute){} 
 
   ngOnInit(): void {
+
+
+    let firebaseGoogleAuth:any=sessionStorage.getItem("url");
+    FirebaseGoogleAuthReceived=JSON.parse(firebaseGoogleAuth);
+    console.log(FirebaseGoogleAuthReceived)
 
     const db = getDatabase(app);
 
@@ -118,12 +122,10 @@ export class ProductosComponent implements OnInit{
   cambio(dato:string){
     this.tipo_producto=dato;
   }
-
   GoToLogin(){
       console.log("si va")
       this.route.navigateByUrl("/login")
   }
-
   changeStyle(style:string){
     this.service.ChangeCurrentConfig(style);
     this.freno=1;
@@ -131,7 +133,8 @@ export class ProductosComponent implements OnInit{
   }
   Add(producto:FirebaseObject){
     this.service.add_to_mi_lista(producto);
-  }  
+  }
+    
 }
 
 

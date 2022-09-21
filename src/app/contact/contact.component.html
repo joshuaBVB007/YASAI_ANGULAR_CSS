@@ -1,12 +1,12 @@
 <app-nav-bar></app-nav-bar>
 
-
-<div class="contact">
-    <h1>Contact us</h1>
-    <input class="uno" placeholder="Whole name"  [(ngModel)]="whole_name" type="text">
-    <input class="dos" placeholder="E-mail" [(ngModel)]="mail" type="email">
-    <input class="tres" placeholder="How did you know us?" [(ngModel)]="knowus" type="text">
-    <textarea class="cuatro" placeholder="Write something" [(ngModel)]="something" cols="30" rows="4"></textarea>
-    <button (click)="GetOpinion()">Send</button>
-</div>
-
+<h1>Contact us</h1>
+<form class="contact" [formGroup]="profileForm">
+    <input type="text" formControlName="name" placeholder="Nombre?">
+    <input type="text" formControlName="mail" placeholder="Email?">
+    <input type="text" formControlName="knowus" placeholder="How did you know us?">
+    <button 
+     [disabled]="!this.profileForm.valid"
+     (click)="SendToServer()"
+    >{{ !this.profileForm.valid ? "Blank fields" : "Ready to send" }}</button>
+</form> 

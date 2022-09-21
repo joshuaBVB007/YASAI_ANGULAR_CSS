@@ -1,17 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-class Opinion{
-  whole_name="";
-  mail="";
-  knowus="";
-  something="";
-  constructor(name:string,mail:string,knowus:string,something:string){
-    this.whole_name=name;
-    this.mail=mail;
-    this.knowus=knowus;
-    this.something=something;
-  }
-}
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -21,17 +9,19 @@ class Opinion{
 
 export class ContactComponent implements OnInit {
 
-  whole_name="";
-  mail="";
-  knowus="";
-  something="";
+  profileForm=new FormGroup({
+    name:new FormControl('',Validators.required),
+    mail:new FormControl('',Validators.required),
+    knowus:new FormControl('',Validators.required),  
+  })
 
   constructor() { }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
-  GetOpinion(){
-      var queja=new Opinion(this.whole_name,this.mail,this.knowus,this.something);
-      console.log(queja)
+  SendToServer(){
+      console.log("funciona")
+      console.log(this.profileForm);
   }
 
 }

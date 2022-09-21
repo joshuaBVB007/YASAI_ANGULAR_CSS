@@ -12,12 +12,11 @@ import { HistorialComponent } from './historial/historial.component';
 
 //Array de rutas validado
 const routes: Routes = [
-  {path:"about",component:AboutUsComponent},
+  {path:"",component:LogInComponent},
   {path:"products",component:ProductosComponent},
   {path:"contact",component:ContactComponent},
   {path:"location",component:LocationComponent},
   {path:"historial",component:HistorialComponent},
-  // {path:"login",component:LogInComponent},
   {path:"payout",component:PayoutComponent},
   {path:"details/:nombre",component:ProductDetailComponent},
   {path:'', redirectTo: '/products',pathMatch:'full'},

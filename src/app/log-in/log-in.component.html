@@ -1,10 +1,13 @@
 <div class="datos">
-    <div class="inputs">
+        <img src="../../assets/About-us/manzana_banana.png" alt="" srcset="">
         <input type="text" [(ngModel)]="email" required placeholder="E-mail">
         <input type="password" [(ngModel)]="password" required placeholder="Password">
         <button (click)="SignIn()" >Sign In</button>
         <button (click)="SignUp()" >Sign Up</button>
-    </div>
+        <button class="google_button" (click)="GetData()">
+            <img class="google_logo" src="../../assets/google.png">
+        </button>
+        <p>Hola,recibe un cordial saludo de la familia Yasai,puedes iniciar sesion con Google o crear un usuario Yasai</p>
 </div>
 
 

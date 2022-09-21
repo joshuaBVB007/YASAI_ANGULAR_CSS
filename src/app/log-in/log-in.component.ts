@@ -1,16 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-//Lo hemos importado de el modulo de npm: npm install firebase  
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { getDatabase, ref, set } from "firebase/database";
 import { Router } from '@angular/router';
-
-
-/* Pasos de instalacion del Auth
-https://firebase.google.com/docs/web/setup?authuser=0
-*/
-
-import { initializeApp } from 'firebase/app';
+import { FirebaseError, initializeApp } from 'firebase/app';
 import { RestService } from '../rest.service';
+import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, UserCredential } from "firebase/auth";
 
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
@@ -25,11 +18,9 @@ const firebaseConfig = {
   measurementId: "G-EWXR6F76NK"
 };
 
-
-
+const provider = new GoogleAuthProvider();
 export const app = initializeApp(firebaseConfig);
-
-
+const auth = getAuth();
 
 @Component({
   selector: 'app-log-in',
@@ -48,6 +39,29 @@ export class LogInComponent implements OnInit {
 
   ngOnInit(): void {
     this.firebaseAuthInstance=getAuth();
+    this.GetData();
+  }
+
+  GetData(){
+    signInWithPopup(auth, provider)
+    .then((result: UserCredential) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential:any = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+      sessionStorage.setItem("url",JSON.stringify(user));
+      this.router.navigate(['products']);
+    }).catch((error: FirebaseError | any) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    });
   }
 
   SignUp(){
