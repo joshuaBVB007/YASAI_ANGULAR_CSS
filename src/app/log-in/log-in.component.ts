@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { getDatabase, ref, set } from "firebase/database";
 import { Router } from '@angular/router';
-import { FirebaseError, initializeApp } from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 import { RestService } from '../rest.service';
-import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, UserCredential } from "firebase/auth";
+import { getAuth,createUserWithEmailAndPassword,
+   signInWithEmailAndPassword,
+   signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
@@ -38,29 +39,25 @@ export class LogInComponent implements OnInit {
   constructor(private service:RestService,private router:Router) { }
 
   ngOnInit(): void {
-    this.firebaseAuthInstance=getAuth();
-    this.GetData();
+    this.firebaseAuthInstance=auth;
+    console.log(auth);
+    console.log(provider);
   }
 
   GetData(){
+    //No funciona para dispositivos moviles
     signInWithPopup(auth, provider)
-    .then((result: UserCredential) => {
+    .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential:any = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      sessionStorage.setItem("url",JSON.stringify(user));
-      this.router.navigate(['products']);
-    }).catch((error: FirebaseError | any) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.customData.email;
-      // The AuthCredential type that was used.
-      const credential = GoogleAuthProvider.credentialFromError(error);
+      console.log(user)
+      
       // ...
+    }).catch((error) => {
+      console.log(error);
     });
   }
 

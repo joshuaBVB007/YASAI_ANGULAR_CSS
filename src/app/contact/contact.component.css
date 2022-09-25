@@ -1,6 +1,14 @@
 .contact{
     width: 60%;display: block;margin: auto;
 }
+.popUp{
+    visibility: hidden;
+    color: red;
+}
+.popUpShowed{
+    visibility: visible;
+    color: green;
+}
 h1{
     text-align: center;
 }

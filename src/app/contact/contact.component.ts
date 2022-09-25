@@ -15,13 +15,18 @@ export class ContactComponent implements OnInit {
     knowus:new FormControl('',Validators.required),  
   })
 
+  isSpecial=false;
+
   constructor() { }
   ngOnInit(): void {
   }
 
   SendToServer(){
-      console.log("funciona")
       console.log(this.profileForm);
+      // $( ".isSpecial" ).fadeIn( "slow", function() {
+      //   // // Animation complete.
+      //   // this.isSpecial=!this.isSpecial;
+      // });
   }
 
 }
