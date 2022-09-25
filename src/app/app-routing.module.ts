@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:"historial",component:HistorialComponent},
   {path:"payout",component:PayoutComponent},
   {path:"details/:nombre",component:ProductDetailComponent},
-  {path:'', redirectTo: '/products',pathMatch:'full'},
+  {path:"", redirectTo: '/',pathMatch:'full'},
   {path:"**",component:AboutUsComponent},
 ];
 
