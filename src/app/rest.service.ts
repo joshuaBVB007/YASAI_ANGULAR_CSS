@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { ToastrService } from 'ngx-toastr';
 import { FirebaseObject } from './productos/productos.component';
 
 
@@ -17,17 +15,7 @@ export class RestService {
   que_es="";
   current_config="manzana";
 
-  userFirebaseActive:any;
-
-  userOnSession(usuario:any){
-      this.userFirebaseActive=usuario;
-  }
-
-  getUserOnSession(){
-    return this.userFirebaseActive;
-  }
-
-  constructor(private httpPointer:HttpClient,private toast:ToastrService) {}
+  constructor() {}
 
   add_to_mi_lista(producto:FirebaseObject){
       //ingresamos un nuevo producto añadido por el cliente
@@ -50,25 +38,5 @@ export class RestService {
         this.current_config=new_config;
         console.log(this.current_config);
   }
-
-
-  // STAGE AREA
-  RequestData(){
-    // return  this.httpPointer.get("https://www.universal-tutorial.com/api/countries/",{headers});
-    return this.httpPointer.get("https://dog.ceo/api/breeds/list/all");
-  }
-
-  Correctly(){
-    this.toast.success("Sign up correctly","OK",{
-      timeOut:3000,
-    });
-  }
-
-  InCorrectly(){
-    this.toast.error("User already in used ","Data unfilled or",{
-      timeOut:6000,
-    });
-  }
-
   
 }

@@ -31,7 +31,6 @@ export class HistorialComponent implements OnInit {
     // accedmos a la bbdd en la nube de firebase
     const db = getDatabase(app);
     // accedemos al nodo de esa bbdd 
-    this.userFirebaseOnSessionReceiver=this.service.getUserOnSession();
     console.log(this.userFirebaseOnSessionReceiver);
     const nodo = ref(db, 'Compras_de_los_usuarios/' +this.userFirebaseOnSessionReceiver.uid.toString());
      //this.userActive.uid

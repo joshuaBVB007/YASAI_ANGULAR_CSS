@@ -16,7 +16,6 @@ import { SearchPipe } from './search.pipe';
 import { PayoutComponent } from './payout/payout.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
 import { HistorialComponent } from './historial/historial.component';
 
 
@@ -43,7 +42,6 @@ import { HistorialComponent } from './historial/historial.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot(),
     BrowserAnimationsModule
   ],
   providers: [],

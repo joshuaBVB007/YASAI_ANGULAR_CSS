@@ -2,12 +2,12 @@
     width: 60%;display: block;margin: auto;
 }
 .popUp{
-    visibility: hidden;
-    color: red;
-}
-.popUpShowed{
-    visibility: visible;
-    color: green;
+    display:none;
+    margin:5% auto;
+    width: 40%;
+    color: white;
+    background-color: var(--strong-green);
+    border-radius:20px;
 }
 h1{
     text-align: center;
@@ -46,3 +46,8 @@ button{
         width: 100%;
    }   
 }
+@media screen and (max-width: 300px){
+    .popUp{
+        font-size:medium;
+    }   
+ }

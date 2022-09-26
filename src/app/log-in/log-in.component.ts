@@ -44,7 +44,7 @@ export class LogInComponent implements OnInit {
     console.log(provider);
   }
 
-  GetData(){
+  LogInWithGoogle(){
     //No funciona para dispositivos moviles
     signInWithPopup(auth, provider)
     .then((result) => {
@@ -54,42 +54,34 @@ export class LogInComponent implements OnInit {
       // The signed-in user info.
       const user = result.user;
       console.log(user)
+      this.router.navigateByUrl("products")
     }).catch((error) => {
       console.log(error);
     });
   }
-
   SignUp(){
     createUserWithEmailAndPassword(this.firebaseAuthInstance, this.email,this.password)
         .then((userCredential) => {
-
-          this.service.Correctly();
           const user = userCredential.user;
         })
         .catch((error) => {
-          this.service.InCorrectly();
           const errorCode = error.code;
           const errorMessage = error.message;
           // ..
     });
   }
-  
-
   SignIn(){
     signInWithEmailAndPassword(this.firebaseAuthInstance, this.email,this.password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      console.log("todo en orden")
       this.userActive=getAuth().currentUser;
       console.log(this.userActive.uid);
-      this.service.userOnSession(this.userActive);
       this.router.navigateByUrl("products")
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("Datos incorrectos")
     });
   }
 

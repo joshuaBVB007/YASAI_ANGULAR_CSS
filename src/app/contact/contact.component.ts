@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-contact',
@@ -15,18 +16,20 @@ export class ContactComponent implements OnInit {
     knowus:new FormControl('',Validators.required),  
   })
 
-  isSpecial=false;
-
   constructor() { }
   ngOnInit(): void {
   }
 
   SendToServer(){
-      console.log(this.profileForm);
-      // $( ".isSpecial" ).fadeIn( "slow", function() {
-      //   // // Animation complete.
-      //   // this.isSpecial=!this.isSpecial;
-      // });
+      /* How does this popup work? we use display block because everytime 
+      we use fadeOut the Html element is put as "display:none" which means it disappear from
+      DOM's structure,so.we need to put display block to get it back to the DOM
+      */
+      $( ".popUp" ).css("display","block");
+      $( ".popUp" ).fadeOut(2000,()=>{
+        // After completed
+      })
+      console.log("Clicado")
   }
 
 }
