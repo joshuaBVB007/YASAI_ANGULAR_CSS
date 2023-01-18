@@ -1,9 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
-import { getDatabase, ref, onValue} from "firebase/database";
-import { app } from '../log-in/log-in.component';   
+import { getDatabase, ref, onValue} from "firebase/database";  
 import { Router,ActivatedRoute } from '@angular/router';
+import { initializeApp } from 'firebase/app';
 
+const firebaseConfig = {
+  apiKey: "AIzaSyCUelzJLvuyI-3A8jWHRUWAS8vgugL5hrc",
+  authDomain: "yasaibackend.firebaseapp.com",
+  projectId: "yasaibackend",
+  //linea requerida en realtime database para conectar con la base de datos
+  databaseURL: "https://yasaibackend-default-rtdb.europe-west1.firebasedatabase.app",
+  storageBucket: "yasaibackend.appspot.com",
+  messagingSenderId: "838306389759",
+  appId: "1:838306389759:web:ea9799c4bc0fabb885b6ca",
+  measurementId: "G-EWXR6F76NK"
+};
 
 export class FirebaseObject{
   nombre:string="";
@@ -16,6 +27,7 @@ export class FirebaseObject{
   }
 }
 export let FirebaseGoogleAuthReceived:any;
+const app = initializeApp(firebaseConfig);
 
 @Component({
   selector: 'app-productos',
@@ -35,6 +47,7 @@ export class ProductosComponent implements OnInit{
   postres_:any[]=[];
   smoothies_:any[]=[];
 
+
   //Propiedad utilizada en el filtro del buscador
   dato:string="";
 
@@ -52,22 +65,22 @@ export class ProductosComponent implements OnInit{
 
     if(this.freno===0){
       const nodo = ref(db, 'Productos/' +"Frutas");
-    onValue(nodo, (snapshot) => {
-      const data = snapshot.val();
-      this.getFrutas(data);
-    });
+      onValue(nodo, (snapshot) => {
+        const data = snapshot.val();
+        this.getFrutas(data);
+      });
 
-    const nodo_dos = ref(db, 'Productos/' +"Postres");
-    onValue(nodo_dos, (snapshot) => {
-      const data = snapshot.val();
-      this.getPostres(data);
-    });
+      const nodo_dos = ref(db, 'Productos/' +"Postres");
+      onValue(nodo_dos, (snapshot) => {
+        const data = snapshot.val();
+        this.getPostres(data);
+      });
 
-    const nodo_tres = ref(db, 'Productos/' +"Smoothies");
-    onValue(nodo_tres, (snapshot) => {
-      const data = snapshot.val();
-      this.getSmoothies(data);
-    });
+      const nodo_tres = ref(db, 'Productos/' +"Smoothies");
+      onValue(nodo_tres, (snapshot) => {
+        const data = snapshot.val();
+        this.getSmoothies(data);
+      });
     }
 
 
@@ -124,7 +137,6 @@ export class ProductosComponent implements OnInit{
   }
   GoToLogin(){
       console.log("si va")
-      this.route.navigateByUrl("/login")
   }
   changeStyle(style:string){
     this.service.ChangeCurrentConfig(style);

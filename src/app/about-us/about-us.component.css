@@ -20,6 +20,19 @@
     color:var(--strong-green);
     font-size: 3vw;
 }
+.video_media{
+    display: inline;
+    width:30%;
+    border: none;
+}
+
+.cont_videos{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
 
 
 /* Cards del fondo */

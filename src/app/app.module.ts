@@ -14,7 +14,6 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { CounterComponent } from './counter/counter.component';
 import { SearchPipe } from './search.pipe';
 import { PayoutComponent } from './payout/payout.component';
-import { LogInComponent } from './log-in/log-in.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HistorialComponent } from './historial/historial.component';
 
@@ -33,7 +32,6 @@ import { HistorialComponent } from './historial/historial.component';
     CounterComponent,
     SearchPipe,
     PayoutComponent,
-    LogInComponent,
     HistorialComponent,
   ],
   imports: [

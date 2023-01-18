@@ -1,7 +1,6 @@
 <app-nav-bar></app-nav-bar>
 <app-tool-bar></app-tool-bar>
 
-<!-- <img class="googleuser" [src]="img_google" alt="img google user" srcset=""> -->
 <!-- Search Bar -->
 <div class="search">
         <input id="input-search" [(ngModel)]='dato' type="text" placeholder="Type product's name?">
@@ -24,7 +23,7 @@
 <div  [ngSwitch]="tipo_producto" class="conCards">
         <ul *ngSwitchCase="'frutas'" >
                 <div *ngFor="let item of frutas_ | search:dato" class="card">
-                        <img  [src]="item.url" alt="r">
+                        <img class="card_img"  [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <div class="btn_container">
                                 <button (click)="Add(item)"  [ngClass]="btn_disenio">
@@ -58,7 +57,7 @@
         </ul>
         <ul *ngSwitchCase="'smoothies'" >
                 <div *ngFor="let item of smoothies_ | search:dato" class="card">
-                        <img  [src]="item.url" alt="r">
+                        <img class="card_img" [src]="item.url" alt="r">
                         <h6>{{item.nombre}}</h6>
                         <div class="btn_container">
                                 <button  (click)="Add(item)"  [ngClass]="btn_disenio">
