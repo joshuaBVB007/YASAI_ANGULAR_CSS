@@ -13,7 +13,17 @@
     </div>
 </div>
 
-<h1 class="total">Total: {{total}}€</h1>
-<h1 class="total">Total: {{total}}€</h1>
+<footer class="footer">
+    <audio #sourcetag controls>
+        <source src="./../../assets/VideosAudios/coins.mp3" type="audio/mp3" />
+    </audio>
+    <audio #error controls>
+        <source src="./../../assets/VideosAudios/error.mp3" type="audio/mp3" />
+    </audio>
+    <span>Total: {{total}}€ </span> 
+    <button (click)="MakesoundEr()" *ngIf="total">Rechazar</button>
+    <button (click)="Makesound()" *ngIf="total">Pagar</button>
+</footer>
+
 
 

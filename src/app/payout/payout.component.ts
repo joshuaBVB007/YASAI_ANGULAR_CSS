@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { RestService } from '../rest.service';
 
 class ProductoAPagar{
@@ -19,12 +19,14 @@ class ProductoAPagar{
 })
 
 export class PayoutComponent implements OnInit {
-  // lista que hemos listado en la interfaz
+  // lista que hemos renderizado en la interfaz
   items_nearto_buy:any[]=[];
   //lista con los productos a vender
   valores:ProductoAPagar[]=[];
   total:number = 0;
   Quantity:number=0;
+  @ViewChild("sourcetag") myNameElem: ElementRef | undefined;
+  @ViewChild("error") myName: ElementRef | undefined;
 
   constructor(private service:RestService) { }
   
@@ -38,8 +40,22 @@ export class PayoutComponent implements OnInit {
       console.log(obj)
       this.valores.push(obj);
   }
+
+  Makesound(){
+    console.log(this.myNameElem);
+    let sound=this.myNameElem?.nativeElement;
+    sound.play();
+  }
+
+  MakesoundEr(){
+    console.log(this.myName);
+    let soundEr=this.myName?.nativeElement;
+    soundEr.play();
+  }
+
   confirm(){
       let retorno=this.valores.map((value)=>{ return value.precio*value.cantidad });
+      // retorno es la lista de valores que hemos añadido
       console.log(retorno)
       for(let i=0;i<retorno.length;i++){
         console.log(retorno[i])

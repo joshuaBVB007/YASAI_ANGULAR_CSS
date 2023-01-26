@@ -40,7 +40,12 @@ input{
     width: 30%;
     margin-bottom:4%;
 }
-.total{
+
+audio{
+    display:none;
+}
+
+.footer{
     position:fixed;
     bottom: 0;
     left:0;
