@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { RestService } from '../rest.service';
+import * as $ from "jquery";
 
 class ProductoAPagar{
   nombre="";
@@ -39,6 +40,7 @@ export class PayoutComponent implements OnInit {
       let obj=new ProductoAPagar(nombre,parseInt(precio),parseInt(cantidad));
       console.log(obj)
       this.valores.push(obj);
+      this.Makesound()
   }
 
   Makesound(){
@@ -47,11 +49,22 @@ export class PayoutComponent implements OnInit {
     sound.play();
   }
 
-  MakesoundEr(){
-    console.log(this.myName);
-    let soundEr=this.myName?.nativeElement;
-    soundEr.play();
+  Reject(){
+    $( ".popUpReject" ).css("display","block");
+    $( ".popUpReject" ).fadeOut(6000,()=>{
+      // After completed
+      this.total=0;
+    })
   }
+
+  BuyProducts(){
+    $( ".popUp" ).css("display","block");
+      $( ".popUp" ).fadeOut(6000,()=>{
+        // After completed
+        this.total=0;
+    })
+  }
+
 
   confirm(){
       let retorno=this.valores.map((value)=>{ return value.precio*value.cantidad });

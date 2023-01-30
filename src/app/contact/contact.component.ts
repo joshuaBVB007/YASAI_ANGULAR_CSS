@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit {
       $( ".popUp" ).fadeOut(2000,()=>{
         // After completed
       })
-      console.log("Clicado")
+      
   }
 
 }

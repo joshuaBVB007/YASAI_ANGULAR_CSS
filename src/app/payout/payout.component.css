@@ -22,6 +22,25 @@ button{
     border-radius: 20px;
     border:none;
 }
+
+.popUp{
+    display:none;
+    margin:5% auto;
+    width: 40%;
+    color: white;
+    background-color: var(--strong-green);
+    border-radius:20px;
+}
+
+.popUpReject{
+    display:none;
+    margin:5% auto;
+    width: 40%;
+    color: white;
+    background-color: var(--strong-green);
+    border-radius:20px;
+}
+
 input{
     display: block;
     margin: auto;
