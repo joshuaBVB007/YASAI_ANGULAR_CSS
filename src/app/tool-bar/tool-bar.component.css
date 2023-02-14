@@ -8,6 +8,7 @@
 /*secciones que se componen de imagen y un span que funciona de tooltip*/
 .section{
     position: relative;
+    cursor: pointer;
 }
 /*etiquetas span al ser tener el mouse encima*/
 .section:hover span{
