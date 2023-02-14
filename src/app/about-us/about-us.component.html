@@ -3,18 +3,17 @@
 <div class="principal">
     <div class="content">
         <h1>Discover a unique experience</h1>
-        <p>We bring professional chefs to your home to prepare
-            delicious,customized meals at a fraction of the cost
+        <p>For the past few weeks Jen and I have been working together to create a cheat sheet that helps clients build amazing meals that pack in maximum flavor with minimal effort. And it’s finally ready.
+            Using the simple instructions in this infographic, you’ll be able to mix and match ingredients and flavor profiles to come up with literally thousands of easy, delicious, health-supporting meals.
         </p>
     </div>
     <img src="../../assets/About-us/manzana_banana.png" alt="" srcset="">
 </div>
 
-
 <div class="etiquetas_contenido">
     <div class="etiqueta"  *ngFor="let item of tags">
             <img [src]='item.img' alt="Card image">
-            <h4>{{ item.nombre }}</h4>
+            <h1>{{ item.nombre }}</h1>
             <p>
                 {{ item.desc }}
             </p>

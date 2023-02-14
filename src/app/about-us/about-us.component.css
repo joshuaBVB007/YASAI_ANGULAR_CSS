@@ -1,72 +1,108 @@
+p{
+    color: purple;
+    font-size: small;
+}
 .principal{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 70% 30%;
     background-color: var(--greeny);
-    width: 100%;
-    margin:auto;
 }
 .principal img{
-    overflow: hidden;
+    margin-top:auto;
+    margin-bottom:auto;
+    width: 100%;
 }
+
+/* ETIQUETAS DEL IMG Y P */
 .content{
     display:flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    width: 100%;
 }
 .content h1{
     color:var(--blacky);
-    font-size: 5vw;
+    font-size: 60px;
+    /* background-color: yellow; */
 }
 .content p{
-    color:var(--strong-green);
-    font-size: 3vw;
-}
-.video_media{
-    display: inline;
-    width:30%;
-    border: none;
-}
-
-.cont_videos{
+    color:rgb(75, 59, 223);
+    font-size: x-large;
     width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
 }
 
 
-/* Cards del fondo */
+/* CONTENEDOR DE IMG FRUTAS Y INFO */
 .etiquetas_contenido{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
 }
-.etiqueta p{
-    display:block;
+.etiqueta{
+    display: block;
+    width: 30%;
     margin: auto;
-    font-size: medium;
-    width:80%;
-    text-align: center;
 }
 .etiqueta img{
-    display:block;
-    width: 20%;
-    margin:auto;
-    max-width: 100%;
+    display: block;
+    width: 30%;
+    margin: auto;
 }
-.etiqueta h4{
+.etiqueta h1{
     text-align: center;
-    font-size:x-large;
 }
-@media screen and (max-width: 530px){
+
+
+/* VIDEOS */
+.cont_videos{
+    /* background-color: red; */
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.video_media{
+    width: 20%;
+}
+
+@media screen and (max-width: 768px){
     .etiquetas_contenido{
         flex-direction: column;       
     }
-    h1{
+    .etiqueta{
+        width:100%;
+    }
+    p{
+        font-size: smaller;
+        color: green;
+    }
+    .content{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* background-color: red; */
+        width: 100%;
+    }
+    .content h1{
         color:var(--blacky);
-        font-size: 10vw;
+        font-size: 40px;
+        text-align: center;
     }
     .content p{
-        font-size: 5vw;
+        color:rgb(75, 59, 223);
+        font-size: small;
+        text-align: center;
+        width: 100%;
+    }
+    .principal{
+        display: block;
+        width: 100%;
+        background-color: var(--greeny);
+    }
+    .principal img{
+        display: none;
     }
 }
